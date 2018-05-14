@@ -1,0 +1,6 @@
+framework module Pods_omni {
+  umbrella header "Pods-omni-umbrella.h"
+
+  export *
+  module * { export * }
+}

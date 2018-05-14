@@ -1,0 +1,815 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8C3D4F76209F3F6A00262382 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3D4F75209F3F6A00262382 /* TextView.swift */; };
+		8C3D4F78209F421500262382 /* CommentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3D4F77209F421500262382 /* CommentButton.swift */; };
+		8C892D1B209F11A2003EBA96 /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C892D1A209F11A2003EBA96 /* Conversation.swift */; };
+		8C892D20209F177D003EBA96 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C892D1E209F177D003EBA96 /* ChatViewController.swift */; };
+		8C892D21209F177D003EBA96 /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C892D1F209F177D003EBA96 /* ChatViewController.xib */; };
+		8C892D23209F1820003EBA96 /* MessageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C892D22209F1820003EBA96 /* MessageInteractor.swift */; };
+		8C892D26209F2769003EBA96 /* ChatBubbleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C892D24209F2769003EBA96 /* ChatBubbleCell.swift */; };
+		8C892D27209F2769003EBA96 /* ChatBubbleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C892D25209F2769003EBA96 /* ChatBubbleCell.xib */; };
+		8CCC07FB209ED80B0048829A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCC07FA209ED80B0048829A /* AppDelegate.swift */; };
+		8CCC07FD209ED80B0048829A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCC07FC209ED80B0048829A /* ViewController.swift */; };
+		8CCC0800209ED80B0048829A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CCC07FE209ED80B0048829A /* Main.storyboard */; };
+		8CCC0802209ED80F0048829A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CCC0801209ED80F0048829A /* Assets.xcassets */; };
+		8CCC0805209ED80F0048829A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CCC0803209ED80F0048829A /* LaunchScreen.storyboard */; };
+		8CCC0810209ED80F0048829A /* omniTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCC080F209ED80F0048829A /* omniTests.swift */; };
+		8CCC081B209ED80F0048829A /* omniUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCC081A209ED80F0048829A /* omniUITests.swift */; };
+		8CCC082A209ED9BE0048829A /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCC0829209ED9BE0048829A /* Message.swift */; };
+		8CCC082C209EDA160048829A /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCC082B209EDA160048829A /* CoreDataManager.swift */; };
+		8CCC082F209EDA420048829A /* omni.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8CCC082D209EDA420048829A /* omni.xcdatamodeld */; };
+		8CCC0834209EDDA50048829A /* JsonLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCC0833209EDDA50048829A /* JsonLoader.swift */; };
+		8CCC083C209EDE8F0048829A /* items.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CCC083B209EDE8F0048829A /* items.json */; };
+		8CCC0844209EF6190048829A /* DisplayItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCC0842209EF6190048829A /* DisplayItemsViewController.swift */; };
+		8CCC0845209EF6190048829A /* DisplayItemsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CCC0843209EF6190048829A /* DisplayItemsViewController.xib */; };
+		8CCC0847209EF7930048829A /* FetchOrCreatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCC0846209EF7930048829A /* FetchOrCreatable.swift */; };
+		8CCC084A209EF8B10048829A /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCC0849209EF8B10048829A /* Network.swift */; };
+		8CCC084E209EFE3A0048829A /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCC084D209EFE3A0048829A /* Interactor.swift */; };
+		8CCC0854209F05780048829A /* ItemImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCC0852209F05780048829A /* ItemImageCell.swift */; };
+		8CCC0855209F05780048829A /* ItemImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CCC0853209F05780048829A /* ItemImageCell.xib */; };
+		8CCC0857209F074B0048829A /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCC0856209F074B0048829A /* ImageView.swift */; };
+		EEA10860650D112AFC1084F1 /* Pods_omni.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F334D3E3C254D3D41F2A7875 /* Pods_omni.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8CCC080C209ED80F0048829A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8CCC07EF209ED80B0048829A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8CCC07F6209ED80B0048829A;
+			remoteInfo = omni;
+		};
+		8CCC0817209ED80F0048829A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8CCC07EF209ED80B0048829A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8CCC07F6209ED80B0048829A;
+			remoteInfo = omni;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4224CA45F91104AAAF8437C7 /* Pods_omniTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_omniTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C3D4F75209F3F6A00262382 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		8C3D4F77209F421500262382 /* CommentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentButton.swift; sourceTree = "<group>"; };
+		8C892D1A209F11A2003EBA96 /* Conversation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
+		8C892D1E209F177D003EBA96 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		8C892D1F209F177D003EBA96 /* ChatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
+		8C892D22209F1820003EBA96 /* MessageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageInteractor.swift; sourceTree = "<group>"; };
+		8C892D24209F2769003EBA96 /* ChatBubbleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubbleCell.swift; sourceTree = "<group>"; };
+		8C892D25209F2769003EBA96 /* ChatBubbleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatBubbleCell.xib; sourceTree = "<group>"; };
+		8CCC07F7209ED80B0048829A /* omni.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = omni.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CCC07FA209ED80B0048829A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8CCC07FC209ED80B0048829A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8CCC07FF209ED80B0048829A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8CCC0801209ED80F0048829A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8CCC0804209ED80F0048829A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8CCC0806209ED80F0048829A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CCC080B209ED80F0048829A /* omniTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = omniTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CCC080F209ED80F0048829A /* omniTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = omniTests.swift; sourceTree = "<group>"; };
+		8CCC0811209ED80F0048829A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CCC0816209ED80F0048829A /* omniUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = omniUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CCC081A209ED80F0048829A /* omniUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = omniUITests.swift; sourceTree = "<group>"; };
+		8CCC081C209ED80F0048829A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CCC0829209ED9BE0048829A /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		8CCC082B209EDA160048829A /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		8CCC082E209EDA420048829A /* omni.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = omni.xcdatamodel; sourceTree = "<group>"; };
+		8CCC0833209EDDA50048829A /* JsonLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonLoader.swift; sourceTree = "<group>"; };
+		8CCC083B209EDE8F0048829A /* items.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = items.json; sourceTree = "<group>"; };
+		8CCC0842209EF6190048829A /* DisplayItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayItemsViewController.swift; sourceTree = "<group>"; };
+		8CCC0843209EF6190048829A /* DisplayItemsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DisplayItemsViewController.xib; sourceTree = "<group>"; };
+		8CCC0846209EF7930048829A /* FetchOrCreatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchOrCreatable.swift; sourceTree = "<group>"; };
+		8CCC0849209EF8B10048829A /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		8CCC084D209EFE3A0048829A /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		8CCC0852209F05780048829A /* ItemImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemImageCell.swift; sourceTree = "<group>"; };
+		8CCC0853209F05780048829A /* ItemImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemImageCell.xib; sourceTree = "<group>"; };
+		8CCC0856209F074B0048829A /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		EDF789B7B5139F33FB2F4A6C /* Pods-omni.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-omni.debug.xcconfig"; path = "Pods/Target Support Files/Pods-omni/Pods-omni.debug.xcconfig"; sourceTree = "<group>"; };
+		F0347588564B22953A62F14E /* Pods_omniUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_omniUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F334505AC42829F132B6059D /* Pods-omni.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-omni.release.xcconfig"; path = "Pods/Target Support Files/Pods-omni/Pods-omni.release.xcconfig"; sourceTree = "<group>"; };
+		F334D3E3C254D3D41F2A7875 /* Pods_omni.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_omni.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8CCC07F4209ED80B0048829A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEA10860650D112AFC1084F1 /* Pods_omni.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CCC0808209ED80F0048829A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CCC0813209ED80F0048829A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6386E4598871F84AC6B0A1D4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EDF789B7B5139F33FB2F4A6C /* Pods-omni.debug.xcconfig */,
+				F334505AC42829F132B6059D /* Pods-omni.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8CCC07EE209ED80B0048829A = {
+			isa = PBXGroup;
+			children = (
+				8CCC07F9209ED80B0048829A /* omni */,
+				8CCC080E209ED80F0048829A /* omniTests */,
+				8CCC0819209ED80F0048829A /* omniUITests */,
+				8CCC07F8209ED80B0048829A /* Products */,
+				6386E4598871F84AC6B0A1D4 /* Pods */,
+				EA9795CF87336A2A37AB1E8F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8CCC07F8209ED80B0048829A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8CCC07F7209ED80B0048829A /* omni.app */,
+				8CCC080B209ED80F0048829A /* omniTests.xctest */,
+				8CCC0816209ED80F0048829A /* omniUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8CCC07F9209ED80B0048829A /* omni */ = {
+			isa = PBXGroup;
+			children = (
+				8CCC084C209EFE2F0048829A /* Interactors */,
+				8CCC0848209EF8A30048829A /* Services */,
+				8CCC083D209EF5AE0048829A /* ViewController */,
+				8CCC0850209F055D0048829A /* View */,
+				8CCC0832209EDD920048829A /* Extensions */,
+				8CCC0828209ED9A00048829A /* Model */,
+				8CCC07FA209ED80B0048829A /* AppDelegate.swift */,
+				8CCC07FC209ED80B0048829A /* ViewController.swift */,
+				8CCC07FE209ED80B0048829A /* Main.storyboard */,
+				8CCC0801209ED80F0048829A /* Assets.xcassets */,
+				8CCC0803209ED80F0048829A /* LaunchScreen.storyboard */,
+				8CCC0806209ED80F0048829A /* Info.plist */,
+				8CCC0836209EDE410048829A /* Resources */,
+			);
+			path = omni;
+			sourceTree = "<group>";
+		};
+		8CCC080E209ED80F0048829A /* omniTests */ = {
+			isa = PBXGroup;
+			children = (
+				8CCC080F209ED80F0048829A /* omniTests.swift */,
+				8CCC0811209ED80F0048829A /* Info.plist */,
+			);
+			path = omniTests;
+			sourceTree = "<group>";
+		};
+		8CCC0819209ED80F0048829A /* omniUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8CCC081A209ED80F0048829A /* omniUITests.swift */,
+				8CCC081C209ED80F0048829A /* Info.plist */,
+			);
+			path = omniUITests;
+			sourceTree = "<group>";
+		};
+		8CCC0828209ED9A00048829A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8CCC0829209ED9BE0048829A /* Message.swift */,
+				8C892D1A209F11A2003EBA96 /* Conversation.swift */,
+				8CCC0846209EF7930048829A /* FetchOrCreatable.swift */,
+				8CCC082B209EDA160048829A /* CoreDataManager.swift */,
+				8CCC082D209EDA420048829A /* omni.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8CCC0832209EDD920048829A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8CCC0836209EDE410048829A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8CCC0833209EDDA50048829A /* JsonLoader.swift */,
+				8CCC083B209EDE8F0048829A /* items.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8CCC083D209EF5AE0048829A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8CCC0842209EF6190048829A /* DisplayItemsViewController.swift */,
+				8CCC0843209EF6190048829A /* DisplayItemsViewController.xib */,
+				8C892D1E209F177D003EBA96 /* ChatViewController.swift */,
+				8C892D1F209F177D003EBA96 /* ChatViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		8CCC0848209EF8A30048829A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8CCC0849209EF8B10048829A /* Network.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8CCC084C209EFE2F0048829A /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				8CCC084D209EFE3A0048829A /* Interactor.swift */,
+				8C892D22209F1820003EBA96 /* MessageInteractor.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		8CCC0850209F055D0048829A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8CCC0851209F05640048829A /* Cell */,
+				8CCC0856209F074B0048829A /* ImageView.swift */,
+				8C3D4F75209F3F6A00262382 /* TextView.swift */,
+				8C3D4F77209F421500262382 /* CommentButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8CCC0851209F05640048829A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8CCC0852209F05780048829A /* ItemImageCell.swift */,
+				8CCC0853209F05780048829A /* ItemImageCell.xib */,
+				8C892D24209F2769003EBA96 /* ChatBubbleCell.swift */,
+				8C892D25209F2769003EBA96 /* ChatBubbleCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		EA9795CF87336A2A37AB1E8F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F334D3E3C254D3D41F2A7875 /* Pods_omni.framework */,
+				4224CA45F91104AAAF8437C7 /* Pods_omniTests.framework */,
+				F0347588564B22953A62F14E /* Pods_omniUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8CCC07F6209ED80B0048829A /* omni */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8CCC081F209ED80F0048829A /* Build configuration list for PBXNativeTarget "omni" */;
+			buildPhases = (
+				305DA582FA7ABDB3751E2857 /* [CP] Check Pods Manifest.lock */,
+				8CCC07F3209ED80B0048829A /* Sources */,
+				8CCC07F4209ED80B0048829A /* Frameworks */,
+				8CCC07F5209ED80B0048829A /* Resources */,
+				1CAE412CE8AE3428A67E69D5 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = omni;
+			productName = omni;
+			productReference = 8CCC07F7209ED80B0048829A /* omni.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8CCC080A209ED80F0048829A /* omniTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8CCC0822209ED80F0048829A /* Build configuration list for PBXNativeTarget "omniTests" */;
+			buildPhases = (
+				8CCC0807209ED80F0048829A /* Sources */,
+				8CCC0808209ED80F0048829A /* Frameworks */,
+				8CCC0809209ED80F0048829A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8CCC080D209ED80F0048829A /* PBXTargetDependency */,
+			);
+			name = omniTests;
+			productName = omniTests;
+			productReference = 8CCC080B209ED80F0048829A /* omniTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8CCC0815209ED80F0048829A /* omniUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8CCC0825209ED80F0048829A /* Build configuration list for PBXNativeTarget "omniUITests" */;
+			buildPhases = (
+				8CCC0812209ED80F0048829A /* Sources */,
+				8CCC0813209ED80F0048829A /* Frameworks */,
+				8CCC0814209ED80F0048829A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8CCC0818209ED80F0048829A /* PBXTargetDependency */,
+			);
+			name = omniUITests;
+			productName = omniUITests;
+			productReference = 8CCC0816209ED80F0048829A /* omniUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8CCC07EF209ED80B0048829A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Rebecca Hsiao";
+				TargetAttributes = {
+					8CCC07F6209ED80B0048829A = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					8CCC080A209ED80F0048829A = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 8CCC07F6209ED80B0048829A;
+					};
+					8CCC0815209ED80F0048829A = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 8CCC07F6209ED80B0048829A;
+					};
+				};
+			};
+			buildConfigurationList = 8CCC07F2209ED80B0048829A /* Build configuration list for PBXProject "omni" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8CCC07EE209ED80B0048829A;
+			productRefGroup = 8CCC07F8209ED80B0048829A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8CCC07F6209ED80B0048829A /* omni */,
+				8CCC080A209ED80F0048829A /* omniTests */,
+				8CCC0815209ED80F0048829A /* omniUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8CCC07F5209ED80B0048829A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CCC0855209F05780048829A /* ItemImageCell.xib in Resources */,
+				8CCC083C209EDE8F0048829A /* items.json in Resources */,
+				8C892D21209F177D003EBA96 /* ChatViewController.xib in Resources */,
+				8CCC0805209ED80F0048829A /* LaunchScreen.storyboard in Resources */,
+				8CCC0802209ED80F0048829A /* Assets.xcassets in Resources */,
+				8CCC0845209EF6190048829A /* DisplayItemsViewController.xib in Resources */,
+				8CCC0800209ED80B0048829A /* Main.storyboard in Resources */,
+				8C892D27209F2769003EBA96 /* ChatBubbleCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CCC0809209ED80F0048829A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CCC0814209ED80F0048829A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1CAE412CE8AE3428A67E69D5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-omni/Pods-omni-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-omni/Pods-omni-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		305DA582FA7ABDB3751E2857 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-omni-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8CCC07F3209ED80B0048829A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CCC0854209F05780048829A /* ItemImageCell.swift in Sources */,
+				8CCC084A209EF8B10048829A /* Network.swift in Sources */,
+				8CCC0834209EDDA50048829A /* JsonLoader.swift in Sources */,
+				8CCC084E209EFE3A0048829A /* Interactor.swift in Sources */,
+				8CCC0857209F074B0048829A /* ImageView.swift in Sources */,
+				8CCC07FD209ED80B0048829A /* ViewController.swift in Sources */,
+				8CCC07FB209ED80B0048829A /* AppDelegate.swift in Sources */,
+				8C892D1B209F11A2003EBA96 /* Conversation.swift in Sources */,
+				8CCC082C209EDA160048829A /* CoreDataManager.swift in Sources */,
+				8CCC0844209EF6190048829A /* DisplayItemsViewController.swift in Sources */,
+				8C892D23209F1820003EBA96 /* MessageInteractor.swift in Sources */,
+				8C3D4F76209F3F6A00262382 /* TextView.swift in Sources */,
+				8C892D26209F2769003EBA96 /* ChatBubbleCell.swift in Sources */,
+				8C892D20209F177D003EBA96 /* ChatViewController.swift in Sources */,
+				8CCC082F209EDA420048829A /* omni.xcdatamodeld in Sources */,
+				8CCC082A209ED9BE0048829A /* Message.swift in Sources */,
+				8CCC0847209EF7930048829A /* FetchOrCreatable.swift in Sources */,
+				8C3D4F78209F421500262382 /* CommentButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CCC0807209ED80F0048829A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CCC0810209ED80F0048829A /* omniTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CCC0812209ED80F0048829A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CCC081B209ED80F0048829A /* omniUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8CCC080D209ED80F0048829A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8CCC07F6209ED80B0048829A /* omni */;
+			targetProxy = 8CCC080C209ED80F0048829A /* PBXContainerItemProxy */;
+		};
+		8CCC0818209ED80F0048829A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8CCC07F6209ED80B0048829A /* omni */;
+			targetProxy = 8CCC0817209ED80F0048829A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8CCC07FE209ED80B0048829A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8CCC07FF209ED80B0048829A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8CCC0803209ED80F0048829A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8CCC0804209ED80F0048829A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8CCC081D209ED80F0048829A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8CCC081E209ED80F0048829A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8CCC0820209ED80F0048829A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDF789B7B5139F33FB2F4A6C /* Pods-omni.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = omni/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.codewithbecka.omni;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8CCC0821209ED80F0048829A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F334505AC42829F132B6059D /* Pods-omni.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = omni/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.codewithbecka.omni;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8CCC0823209ED80F0048829A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = omniTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.codewithbecka.omniTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/omni.app/omni";
+			};
+			name = Debug;
+		};
+		8CCC0824209ED80F0048829A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = omniTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.codewithbecka.omniTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/omni.app/omni";
+			};
+			name = Release;
+		};
+		8CCC0826209ED80F0048829A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = omniUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.codewithbecka.omniUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = omni;
+			};
+			name = Debug;
+		};
+		8CCC0827209ED80F0048829A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = omniUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.codewithbecka.omniUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = omni;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8CCC07F2209ED80B0048829A /* Build configuration list for PBXProject "omni" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CCC081D209ED80F0048829A /* Debug */,
+				8CCC081E209ED80F0048829A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8CCC081F209ED80F0048829A /* Build configuration list for PBXNativeTarget "omni" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CCC0820209ED80F0048829A /* Debug */,
+				8CCC0821209ED80F0048829A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8CCC0822209ED80F0048829A /* Build configuration list for PBXNativeTarget "omniTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CCC0823209ED80F0048829A /* Debug */,
+				8CCC0824209ED80F0048829A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8CCC0825209ED80F0048829A /* Build configuration list for PBXNativeTarget "omniUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CCC0826209ED80F0048829A /* Debug */,
+				8CCC0827209ED80F0048829A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8CCC082D209EDA420048829A /* omni.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8CCC082E209EDA420048829A /* omni.xcdatamodel */,
+			);
+			currentVersion = 8CCC082E209EDA420048829A /* omni.xcdatamodel */;
+			path = omni.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 8CCC07EF209ED80B0048829A /* Project object */;
+}
