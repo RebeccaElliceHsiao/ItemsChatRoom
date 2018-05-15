@@ -70,7 +70,7 @@ class ChatViewController: UIViewController, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let message = item.messages?[indexPath.row] as? Message else { return UITableViewCell() }
+        guard let message = self.post.messages?[indexPath.row] as? Message else { return UITableViewCell() }
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "ChatBubbleCell") as! ChatBubbleCell
         cell.configure(message: message)
         return cell

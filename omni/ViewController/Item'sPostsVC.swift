@@ -14,15 +14,14 @@ class Item_sPostsVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     @IBOutlet weak var creatPostButton: PinkButton!
 
     let item: Item
-    var posts: [Post] = []
-//    let interactor = MessageInteractor()
+    let interactor = PostInteractor()
 
     init(item: Item) {
         self.item = item
         super.init(nibName: nil, bundle: nil)
-//        self.interactor.fetchMessages(item: item) { (_) in
+        self.interactor.fetchPost(item: item) { (_) in
             self.tableView.reloadData()
-//        }
+        }
         self.navigationItem.title = item.item_name
     }
     
@@ -31,6 +30,7 @@ class Item_sPostsVC: UIViewController, UITableViewDataSource, UITableViewDelegat
 
         self.tableView.dataSource = self
         self.tableView.delegate = self
+        self.tableView.register(UINib(nibName: "PostCell", bundle: nil), forCellReuseIdentifier: "PostCell")
 
         self.creatPostButton.configure(title: "Create Post")
         self.creatPostButton.addTarget(self, action: #selector(createPostPressed), for: .touchUpInside)
@@ -41,15 +41,22 @@ class Item_sPostsVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        return UITableViewCell()
+        guard let cell = self.tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell,
+            let post = item.posts?[indexPath.row] as? Post else {
+            return UITableViewCell()
+        }
+        cell.configure(with: post)
     }
 
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        
+        guard let post = item.posts?[indexPath.row] as? Post else { return }
+        let vc = ChatViewController(post: post)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 
     @objc func createPostPressed() {
-
+        let vc = MakeEventVC(post: post)
+        self.present(vc, animated: true, completion: nil)
     }
 
 }
