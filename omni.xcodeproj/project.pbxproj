@@ -55,6 +55,9 @@
 		8CD9D3B020AA7B9900B4B54D /* LabelAndTextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD9D3AF20AA7B9900B4B54D /* LabelAndTextInputView.swift */; };
 		8CD9D3B220AA7BEB00B4B54D /* LabelAndTextInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CD9D3B120AA7BEB00B4B54D /* LabelAndTextInputView.xib */; };
 		8CD9D3B420AA883000B4B54D /* PostInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD9D3B320AA883000B4B54D /* PostInteractor.swift */; };
+		8CD9D3B720AA8D0900B4B54D /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD9D3B520AA8D0900B4B54D /* PostCell.swift */; };
+		8CD9D3B820AA8D0900B4B54D /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CD9D3B620AA8D0900B4B54D /* PostCell.xib */; };
+		8CD9D3BA20AA8EB500B4B54D /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD9D3B920AA8EB500B4B54D /* Font.swift */; };
 		EEA10860650D112AFC1084F1 /* Pods_omni.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F334D3E3C254D3D41F2A7875 /* Pods_omni.framework */; };
 /* End PBXBuildFile section */
 
@@ -131,6 +134,9 @@
 		8CD9D3AF20AA7B9900B4B54D /* LabelAndTextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelAndTextInputView.swift; sourceTree = "<group>"; };
 		8CD9D3B120AA7BEB00B4B54D /* LabelAndTextInputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelAndTextInputView.xib; sourceTree = "<group>"; };
 		8CD9D3B320AA883000B4B54D /* PostInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostInteractor.swift; sourceTree = "<group>"; };
+		8CD9D3B520AA8D0900B4B54D /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		8CD9D3B620AA8D0900B4B54D /* PostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
+		8CD9D3B920AA8EB500B4B54D /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		EDF789B7B5139F33FB2F4A6C /* Pods-omni.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-omni.debug.xcconfig"; path = "Pods/Target Support Files/Pods-omni/Pods-omni.debug.xcconfig"; sourceTree = "<group>"; };
 		F0347588564B22953A62F14E /* Pods_omniUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_omniUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F334505AC42829F132B6059D /* Pods-omni.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-omni.release.xcconfig"; path = "Pods/Target Support Files/Pods-omni/Pods-omni.release.xcconfig"; sourceTree = "<group>"; };
@@ -255,6 +261,7 @@
 				8CD9D38C20AA625900B4B54D /* Date.swift */,
 				8CD9D3A520AA723700B4B54D /* Color.swift */,
 				8CD9D3AB20AA778400B4B54D /* Button.swift */,
+				8CD9D3B920AA8EB500B4B54D /* Font.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -326,6 +333,8 @@
 				8CCC0853209F05780048829A /* ItemImageCell.xib */,
 				8C892D24209F2769003EBA96 /* ChatBubbleCell.swift */,
 				8C892D25209F2769003EBA96 /* ChatBubbleCell.xib */,
+				8CD9D3B520AA8D0900B4B54D /* PostCell.swift */,
+				8CD9D3B620AA8D0900B4B54D /* PostCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -449,6 +458,7 @@
 				8CCC0855209F05780048829A /* ItemImageCell.xib in Resources */,
 				8CCC083C209EDE8F0048829A /* items.json in Resources */,
 				8C892D21209F177D003EBA96 /* ChatViewController.xib in Resources */,
+				8CD9D3B820AA8D0900B4B54D /* PostCell.xib in Resources */,
 				8CCC0805209ED80F0048829A /* LaunchScreen.storyboard in Resources */,
 				8CD9D39C20AA6BE700B4B54D /* MakePostVC.xib in Resources */,
 				8CCC0802209ED80F0048829A /* Assets.xcassets in Resources */,
@@ -524,6 +534,7 @@
 			files = (
 				8CD9D39B20AA6BE700B4B54D /* MakePostVC.swift in Sources */,
 				8CD9D3A020AA6C5100B4B54D /* Request.swift in Sources */,
+				8CD9D3BA20AA8EB500B4B54D /* Font.swift in Sources */,
 				8CCC0854209F05780048829A /* ItemImageCell.swift in Sources */,
 				8CD9D3B420AA883000B4B54D /* PostInteractor.swift in Sources */,
 				8CD9D38820AA542900B4B54D /* EnterUserNameVC.swift in Sources */,
@@ -539,6 +550,7 @@
 				8CD9D38F20AA631200B4B54D /* User.swift in Sources */,
 				8CD9D3AE20AA78E600B4B54D /* PostForm.swift in Sources */,
 				8CCC0844209EF6190048829A /* DisplayItemsViewController.swift in Sources */,
+				8CD9D3B720AA8D0900B4B54D /* PostCell.swift in Sources */,
 				8C892D23209F1820003EBA96 /* MessageInteractor.swift in Sources */,
 				8C3D4F76209F3F6A00262382 /* TextView.swift in Sources */,
 				8C892D26209F2769003EBA96 /* ChatBubbleCell.swift in Sources */,

@@ -6,7 +6,8 @@
 //  Copyright © 2018年 Rebecca Hsiao. All rights reserved.
 //
 
-import Foundation
+import UIKit
+import CoreData
 
 @objc(Post)
 class Post: NSManagedObject {
@@ -99,5 +100,25 @@ class Post: NSManagedObject {
         } else if self is Offer {
             return .offer
         }
+    }
+
+    func posterWithPostTypeAttributedString() -> NSAttributedString {
+        guard let name = self.creator else { return NSAttributedString() }
+        var string = NSMutableAttributedString(string: "\(name)'s ", attributes:
+            [NSAttributedStringKey.font : UIFont.boldFont(size: 14)])
+
+        if self is Request {
+            let typeString = NSAttributedString(string: "REQUEST", attributes:
+                [NSAttributedStringKey.font: UIFont.boldFont(size: 15.0),
+                 NSAttributedStringKey.foregroundColor: UIColor.request])
+            string.append(typeString)
+        }
+        if self is Offer {
+            let typeString = NSAttributedString(string: "OFFER", attributes:
+                [NSAttributedStringKey.font: UIFont.boldFont(size: 15.0),
+                 NSAttributedStringKey.foregroundColor: UIColor.offer])
+            string.append(typeString)
+        }
+        return string
     }
 }
