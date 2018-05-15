@@ -27,4 +27,10 @@ extension UIColor {
             return UIColor(white: 0.8, alpha: 1.0)
         }
     }
+
+    class var redPink: UIColor {
+        get {
+            return UIColor(red: 1.0, green: 45.0/255.0, blue: 85.0/255.0, alpha: 1.0)
+        }
+    }
 }
