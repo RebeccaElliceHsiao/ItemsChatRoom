@@ -42,6 +42,10 @@
 		8CD9D38F20AA631200B4B54D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD9D38E20AA631200B4B54D /* User.swift */; };
 		8CD9D39720AA68AC00B4B54D /* Item'sPostsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD9D39520AA68AC00B4B54D /* Item'sPostsVC.swift */; };
 		8CD9D39820AA68AC00B4B54D /* Item'sPostsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CD9D39620AA68AC00B4B54D /* Item'sPostsVC.xib */; };
+		8CD9D39B20AA6BE700B4B54D /* MakePostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD9D39920AA6BE600B4B54D /* MakePostVC.swift */; };
+		8CD9D39C20AA6BE700B4B54D /* MakePostVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CD9D39A20AA6BE700B4B54D /* MakePostVC.xib */; };
+		8CD9D3A020AA6C5100B4B54D /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD9D39F20AA6C5100B4B54D /* Request.swift */; };
+		8CD9D3A220AA6C5A00B4B54D /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD9D3A120AA6C5A00B4B54D /* Offer.swift */; };
 		EEA10860650D112AFC1084F1 /* Pods_omni.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F334D3E3C254D3D41F2A7875 /* Pods_omni.framework */; };
 /* End PBXBuildFile section */
 
@@ -105,6 +109,10 @@
 		8CD9D38E20AA631200B4B54D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8CD9D39520AA68AC00B4B54D /* Item'sPostsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Item'sPostsVC.swift"; path = "omni/ViewController/Item'sPostsVC.swift"; sourceTree = SOURCE_ROOT; };
 		8CD9D39620AA68AC00B4B54D /* Item'sPostsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "Item'sPostsVC.xib"; path = "omni/ViewController/Item'sPostsVC.xib"; sourceTree = SOURCE_ROOT; };
+		8CD9D39920AA6BE600B4B54D /* MakePostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakePostVC.swift; sourceTree = "<group>"; };
+		8CD9D39A20AA6BE700B4B54D /* MakePostVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MakePostVC.xib; sourceTree = "<group>"; };
+		8CD9D39F20AA6C5100B4B54D /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		8CD9D3A120AA6C5A00B4B54D /* Offer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
 		EDF789B7B5139F33FB2F4A6C /* Pods-omni.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-omni.debug.xcconfig"; path = "Pods/Target Support Files/Pods-omni/Pods-omni.debug.xcconfig"; sourceTree = "<group>"; };
 		F0347588564B22953A62F14E /* Pods_omniUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_omniUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F334505AC42829F132B6059D /* Pods-omni.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-omni.release.xcconfig"; path = "Pods/Target Support Files/Pods-omni/Pods-omni.release.xcconfig"; sourceTree = "<group>"; };
@@ -213,6 +221,8 @@
 				8C892D1A209F11A2003EBA96 /* Item.swift */,
 				8CD9D38A20AA572A00B4B54D /* Post.swift */,
 				8CD9D38E20AA631200B4B54D /* User.swift */,
+				8CD9D39F20AA6C5100B4B54D /* Request.swift */,
+				8CD9D3A120AA6C5A00B4B54D /* Offer.swift */,
 				8CCC0846209EF7930048829A /* FetchOrCreatable.swift */,
 				8CCC082B209EDA160048829A /* CoreDataManager.swift */,
 				8CCC082D209EDA420048829A /* omni.xcdatamodeld */,
@@ -248,6 +258,8 @@
 				8C892D1F209F177D003EBA96 /* ChatViewController.xib */,
 				8CD9D38620AA542900B4B54D /* EnterUserNameVC.swift */,
 				8CD9D38720AA542900B4B54D /* EnterUserNameVC.xib */,
+				8CD9D39920AA6BE600B4B54D /* MakePostVC.swift */,
+				8CD9D39A20AA6BE700B4B54D /* MakePostVC.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -411,6 +423,7 @@
 				8CCC083C209EDE8F0048829A /* items.json in Resources */,
 				8C892D21209F177D003EBA96 /* ChatViewController.xib in Resources */,
 				8CCC0805209ED80F0048829A /* LaunchScreen.storyboard in Resources */,
+				8CD9D39C20AA6BE700B4B54D /* MakePostVC.xib in Resources */,
 				8CCC0802209ED80F0048829A /* Assets.xcassets in Resources */,
 				8CCC0845209EF6190048829A /* DisplayItemsViewController.xib in Resources */,
 				8CD9D38920AA542900B4B54D /* EnterUserNameVC.xib in Resources */,
@@ -480,6 +493,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CD9D39B20AA6BE700B4B54D /* MakePostVC.swift in Sources */,
+				8CD9D3A020AA6C5100B4B54D /* Request.swift in Sources */,
 				8CCC0854209F05780048829A /* ItemImageCell.swift in Sources */,
 				8CD9D38820AA542900B4B54D /* EnterUserNameVC.swift in Sources */,
 				8CCC084A209EF8B10048829A /* Network.swift in Sources */,
@@ -502,6 +517,7 @@
 				8CCC082A209ED9BE0048829A /* Message.swift in Sources */,
 				8CCC0847209EF7930048829A /* FetchOrCreatable.swift in Sources */,
 				8C3D4F78209F421500262382 /* PinkButton.swift in Sources */,
+				8CD9D3A220AA6C5A00B4B54D /* Offer.swift in Sources */,
 				8CD9D38B20AA572A00B4B54D /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

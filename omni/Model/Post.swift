@@ -9,7 +9,7 @@
 import Foundation
 
 @objc(Post)
-class Post: NSManagedObject, FetchOrCreatable{
+class Post: NSManagedObject {
 
     typealias T = Post
 
@@ -32,22 +32,22 @@ class Post: NSManagedObject, FetchOrCreatable{
         if let id = dict["id"] as? Int {
             self.id = String(id)
         }
-        if let text = dataDict["text"] as? String {
+        if let text = dict["text"] as? String {
             self.text = text
         }
-        if let from = dataDict["from_date"] as? String {
+        if let from = dict["from_date"] as? String {
             self.from = Date.iso8601.date(from: from)
         }
-        if let to = dataDict["to_date"] as? String {
+        if let to = dict["to_date"] as? String {
             self.to = Date.iso8601.date(from: to)
         }
-        if let location = dataDict["location"] as? String {
+        if let location = dict["location"] as? String {
             self.location = location
         }
-        if let additionalNotes = dataDict["additional_notes"] as? String {
+        if let additionalNotes = dict["additional_notes"] as? String {
             self.additionalNotes = additionalNotes
         }
-        if let timestamp = data["time_created"] as? String {
+        if let timestamp = dict["time_created"] as? String {
             if let date = Date.isoDate(from: timestamp) {
                 self.timestamp = date
             }
