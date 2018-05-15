@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Item_sPostsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class EachItemPostsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var creatPostButton: PinkButton!

@@ -40,8 +40,8 @@
 		8CD9D38B20AA572A00B4B54D /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD9D38A20AA572A00B4B54D /* Post.swift */; };
 		8CD9D38D20AA625900B4B54D /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD9D38C20AA625900B4B54D /* Date.swift */; };
 		8CD9D38F20AA631200B4B54D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD9D38E20AA631200B4B54D /* User.swift */; };
-		8CD9D39720AA68AC00B4B54D /* Item'sPostsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD9D39520AA68AC00B4B54D /* Item'sPostsVC.swift */; };
-		8CD9D39820AA68AC00B4B54D /* Item'sPostsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CD9D39620AA68AC00B4B54D /* Item'sPostsVC.xib */; };
+		8CD9D39720AA68AC00B4B54D /* EachItemPostsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD9D39520AA68AC00B4B54D /* EachItemPostsVC.swift */; };
+		8CD9D39820AA68AC00B4B54D /* EachItemPostsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CD9D39620AA68AC00B4B54D /* EachItemPostsVC.xib */; };
 		8CD9D39B20AA6BE700B4B54D /* MakePostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD9D39920AA6BE600B4B54D /* MakePostVC.swift */; };
 		8CD9D39C20AA6BE700B4B54D /* MakePostVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CD9D39A20AA6BE700B4B54D /* MakePostVC.xib */; };
 		8CD9D3A020AA6C5100B4B54D /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD9D39F20AA6C5100B4B54D /* Request.swift */; };
@@ -121,8 +121,8 @@
 		8CD9D38A20AA572A00B4B54D /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		8CD9D38C20AA625900B4B54D /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		8CD9D38E20AA631200B4B54D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		8CD9D39520AA68AC00B4B54D /* Item'sPostsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Item'sPostsVC.swift"; path = "omni/ViewController/Item'sPostsVC.swift"; sourceTree = SOURCE_ROOT; };
-		8CD9D39620AA68AC00B4B54D /* Item'sPostsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "Item'sPostsVC.xib"; path = "omni/ViewController/Item'sPostsVC.xib"; sourceTree = SOURCE_ROOT; };
+		8CD9D39520AA68AC00B4B54D /* EachItemPostsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EachItemPostsVC.swift; path = omni/ViewController/EachItemPostsVC.swift; sourceTree = SOURCE_ROOT; };
+		8CD9D39620AA68AC00B4B54D /* EachItemPostsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = EachItemPostsVC.xib; path = omni/ViewController/EachItemPostsVC.xib; sourceTree = SOURCE_ROOT; };
 		8CD9D39920AA6BE600B4B54D /* MakePostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakePostVC.swift; sourceTree = "<group>"; };
 		8CD9D39A20AA6BE700B4B54D /* MakePostVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MakePostVC.xib; sourceTree = "<group>"; };
 		8CD9D39F20AA6C5100B4B54D /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
@@ -282,8 +282,8 @@
 		8CCC083D209EF5AE0048829A /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				8CD9D39520AA68AC00B4B54D /* Item'sPostsVC.swift */,
-				8CD9D39620AA68AC00B4B54D /* Item'sPostsVC.xib */,
+				8CD9D39520AA68AC00B4B54D /* EachItemPostsVC.swift */,
+				8CD9D39620AA68AC00B4B54D /* EachItemPostsVC.xib */,
 				8CCC0842209EF6190048829A /* DisplayItemsViewController.swift */,
 				8CCC0843209EF6190048829A /* DisplayItemsViewController.xib */,
 				8C892D1E209F177D003EBA96 /* ChatViewController.swift */,
@@ -480,7 +480,7 @@
 				8CCC0845209EF6190048829A /* DisplayItemsViewController.xib in Resources */,
 				8CD9D3A820AA730100B4B54D /* RadioButton.xib in Resources */,
 				8CD9D38920AA542900B4B54D /* EnterUserNameVC.xib in Resources */,
-				8CD9D39820AA68AC00B4B54D /* Item'sPostsVC.xib in Resources */,
+				8CD9D39820AA68AC00B4B54D /* EachItemPostsVC.xib in Resources */,
 				8CCC0800209ED80B0048829A /* Main.storyboard in Resources */,
 				8CD9D3B220AA7BEB00B4B54D /* LabelAndTextInputView.xib in Resources */,
 				8C892D27209F2769003EBA96 /* ChatBubbleCell.xib in Resources */,
@@ -570,7 +570,7 @@
 				8C892D23209F1820003EBA96 /* MessageInteractor.swift in Sources */,
 				8C3D4F76209F3F6A00262382 /* TextView.swift in Sources */,
 				8C892D26209F2769003EBA96 /* ChatBubbleCell.swift in Sources */,
-				8CD9D39720AA68AC00B4B54D /* Item'sPostsVC.swift in Sources */,
+				8CD9D39720AA68AC00B4B54D /* EachItemPostsVC.swift in Sources */,
 				8C892D20209F177D003EBA96 /* ChatViewController.swift in Sources */,
 				8CCC082F209EDA420048829A /* omni.xcdatamodeld in Sources */,
 				8CD9D3AA20AA761C00B4B54D /* PostType.swift in Sources */,
