@@ -119,6 +119,7 @@ class PostEventForm: UIView {
         post?.flexibleHours = self.from.flexibleHours ?? true
         post?.location = self.location.text
         post?.additionalNotes = self.additionalNotes.text
+        post?.creator = User.currentUser
 
         return post
     }

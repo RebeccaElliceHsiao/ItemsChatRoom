@@ -17,17 +17,17 @@ class ChatViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var tableView: UITableView!
     
-    var item: Item
+    var post: Post
     var isTyping = false
     let interactor = MessageInteractor()
 
-    init(item: Item) {
-        self.item = item
+    init(post: Post) {
+        self.item = post
         super.init(nibName: nil, bundle: nil)
-        self.interactor.fetchMessages(item: item) { (_) in
+        self.interactor.fetchMessages(post: post) { (_) in
             self.tableView.reloadData()
         }
-        self.navigationItem.title = item.item_name
+        self.navigationItem.title = post.item_name
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -95,8 +95,9 @@ class ChatViewController: UIViewController, UITableViewDataSource {
 
     @objc func sendPressed() {
         let message = Message.createNew()
-        message.conversation = item
+        message.post = self.post
         message.text = self.textView.text ?? ""
+        message.creator = User.currentUser
         self.interactor.createMessage(message: message, completionHandler: { (message, _) in
             self.screenWasTapped()
             self.tableView.reloadData()

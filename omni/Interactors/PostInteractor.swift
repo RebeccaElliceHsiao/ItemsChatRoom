@@ -1,35 +1,35 @@
 //
-//  MessageInteractor.swift
+//  PostInteractor.swift
 //  omni
 //
-//  Created by Rebecca Hsiao on 2018/05/06.
+//  Created by Rebecca Hsiao on 2018/05/14.
 //  Copyright © 2018年 Rebecca Hsiao. All rights reserved.
 //
 
 import Foundation
 import CoreData
 
-class MessageInteractor: Interactor {
+class PostInteractor: Interactor {
 
-    func createMessage(message: Message, completionHandler:@escaping ((Message?, Error?) -> Void)) {
-        let params: [String: Any] = message.makeDict()
-        let path = "comment"
+    func createPost(post: Post, completionHandler:@escaping ((Post?, Error?) -> Void)) {
+        let params: [String: Any] = post.makeDict()
+        let path = "post"
 
         let request = NetworkRequest(method: .post, path: path, params: params)
         Network.shared.send(request: request) { (jsonData, error) in
             if let jsonData = jsonData as? [String: Any] {
                 if let data = jsonData["data"] as? [String: Any] {
                     let object = self.fetchOrCreateObjects(from: data)
-                    let message = self.getMessage(from: object)
+                    let post = self.getPost(from: object)
                     completionHandler(message, error)
                 }
             }
-        completionHandler(nil, error)
+            completionHandler(nil, error)
         }
     }
 
-    func fetchMessages(post: Post, completionHandler:@escaping ((Error?) -> Void)) {
-        let params: [String: Any] = ["id": post.id]
+    func fetchPost(item: Item, completionHandler:@escaping ((Error?) -> Void)) {
+        let params: [String: Any] = ["id": item.id]
         let path = "item"
         var request = NetworkRequest(method: .get, path: path)
 
@@ -44,34 +44,33 @@ class MessageInteractor: Interactor {
         }
     }
 
-    func deleteMessage(message: Message, completionHandler:@escaping ((Error?) -> Void)) {
+    func deletePost(post: Post, completionHandler:@escaping ((Error?) -> Void)) {
         let params: [String: Any] = ["id": message.id]
-        let path = "comment"
+        let path = "post"
         let request = NetworkRequest(method: .delete, path: path, params: params)
         Network.shared.send(request: request) { (data, error) in
-            CoreDataManager.shared.context.delete(message)
+            CoreDataManager.shared.context.delete(post)
             completionHandler(error)
         }
     }
 
-    func updateMessage(message: Message, completionHandler:@escaping ((Message?, Error?) -> Void)) {
+    func updatePost(post: Post, completionHandler:@escaping ((Post?, Error?) -> Void)) {
         let params: [String: Any] = message.makeDict()
-        let path = "comment"
+        let path = "post"
         let request = NetworkRequest(method: .put, path: path, params: params)
         Network.shared.send(request: request) { (jsonData, error) in
             if let jsonData = jsonData as? [String: Any] {
                 if let data = jsonData["data"] as? [String: Any] {
-                    completionHandler(message, error)
                 }
             }
             completionHandler(nil, error)
         }
     }
 
-    private func getMessage(from objects: [Any]) -> Message? {
+    private func getPost(from objects: [Any]) -> Post? {
         for object in objects {
-            if let message = object as? Message {
-                return message
+            if let post = object as? Post {
+                return post
             }
         }
         return nil

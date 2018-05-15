@@ -85,6 +85,11 @@ class Post: NSManagedObject {
         if let creator = self.creator {
             dict["creator"] = creator
         }
+        if self is Request {
+            dict["type"] = "Request"
+        } else if self is Offer {
+            dict["type"] = "Offer"
+        }
         return dict
     }
 

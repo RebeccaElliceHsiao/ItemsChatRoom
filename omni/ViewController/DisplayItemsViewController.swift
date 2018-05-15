@@ -47,7 +47,7 @@ class DisplayItemsViewController: UIViewController, UICollectionViewDataSource, 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = self.collectionView.cellForItem(at: indexPath)
         let item = items[indexPath.row]
-        let vc = ChatViewController(item: item)
+        let vc = ChatViewController(post: item)
 
         self.animateCell(cell: cell, vc: vc)
     }

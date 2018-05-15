@@ -16,13 +16,29 @@ class Interactor {
                     let item = Item.fetchOrCreate(with: objectDict)
                     objects.append(item)
                 } else {
-                    let comment = Message.fetchOrCreate(with: objectDict)
-                    objects.append(comment)
+                    if data["type"] == "Request" {
+                        let object = Request.fetchOrCreate(with: objectDict)
+                        objects.append(object)
+                    } else if dict["type"] = "Offer" {
+                        let object = Offer.fetchOrCreate(with: objectDict)
+                        objects.append(object)
+                    } else {
+                        let object = Message.fetchOrCreate(with: objectDict)
+                        objects.append(object)
+                    }
                 }
             }
         } else if let data = data as? [String: Any] {
-            let comment = Message.fetchOrCreate(with: data)
-            objects.append(comment)
+            if data["type"] == "Request" {
+                let object = Request.fetchOrCreate(with: objectDict)
+                objects.append(object)
+            } else if dict["type"] = "Offer" {
+                let object = Offer.fetchOrCreate(with: objectDict)
+                objects.append(object)
+            } else {
+                let object = Message.fetchOrCreate(with: objectDict)
+                objects.append(object)
+            }
         }
         try! CoreDataManager.shared.context.save()
         return objects

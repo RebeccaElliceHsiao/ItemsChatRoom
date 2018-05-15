@@ -54,6 +54,7 @@
 		8CD9D3AE20AA78E600B4B54D /* PostForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD9D3AD20AA78E600B4B54D /* PostForm.swift */; };
 		8CD9D3B020AA7B9900B4B54D /* LabelAndTextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD9D3AF20AA7B9900B4B54D /* LabelAndTextInputView.swift */; };
 		8CD9D3B220AA7BEB00B4B54D /* LabelAndTextInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CD9D3B120AA7BEB00B4B54D /* LabelAndTextInputView.xib */; };
+		8CD9D3B420AA883000B4B54D /* PostInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD9D3B320AA883000B4B54D /* PostInteractor.swift */; };
 		EEA10860650D112AFC1084F1 /* Pods_omni.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F334D3E3C254D3D41F2A7875 /* Pods_omni.framework */; };
 /* End PBXBuildFile section */
 
@@ -129,6 +130,7 @@
 		8CD9D3AD20AA78E600B4B54D /* PostForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostForm.swift; sourceTree = "<group>"; };
 		8CD9D3AF20AA7B9900B4B54D /* LabelAndTextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelAndTextInputView.swift; sourceTree = "<group>"; };
 		8CD9D3B120AA7BEB00B4B54D /* LabelAndTextInputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelAndTextInputView.xib; sourceTree = "<group>"; };
+		8CD9D3B320AA883000B4B54D /* PostInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostInteractor.swift; sourceTree = "<group>"; };
 		EDF789B7B5139F33FB2F4A6C /* Pods-omni.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-omni.debug.xcconfig"; path = "Pods/Target Support Files/Pods-omni/Pods-omni.debug.xcconfig"; sourceTree = "<group>"; };
 		F0347588564B22953A62F14E /* Pods_omniUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_omniUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F334505AC42829F132B6059D /* Pods-omni.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-omni.release.xcconfig"; path = "Pods/Target Support Files/Pods-omni/Pods-omni.release.xcconfig"; sourceTree = "<group>"; };
@@ -296,6 +298,7 @@
 			children = (
 				8CCC084D209EFE3A0048829A /* Interactor.swift */,
 				8C892D22209F1820003EBA96 /* MessageInteractor.swift */,
+				8CD9D3B320AA883000B4B54D /* PostInteractor.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -522,6 +525,7 @@
 				8CD9D39B20AA6BE700B4B54D /* MakePostVC.swift in Sources */,
 				8CD9D3A020AA6C5100B4B54D /* Request.swift in Sources */,
 				8CCC0854209F05780048829A /* ItemImageCell.swift in Sources */,
+				8CD9D3B420AA883000B4B54D /* PostInteractor.swift in Sources */,
 				8CD9D38820AA542900B4B54D /* EnterUserNameVC.swift in Sources */,
 				8CCC084A209EF8B10048829A /* Network.swift in Sources */,
 				8CCC0834209EDDA50048829A /* JsonLoader.swift in Sources */,
