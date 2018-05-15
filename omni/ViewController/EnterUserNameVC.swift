@@ -15,7 +15,17 @@ class EnterUserNameVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        submit.addTarget(self, action: #selector(submitPressed), for: .touchUpInside)
+    }
+
+    @objc func submitPressed() {
+        if textField.text == "" {
+            User.currentUser = "Anonymous"
+        } else {
+            User.currentUser = textField.text
+        }
+        let nav = UINavigationController(rootViewController: DisplayItemsViewController())
+        self.present(nav, animated: true, completion: nil)
     }
 
 }

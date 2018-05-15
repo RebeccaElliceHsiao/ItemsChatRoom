@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CommentButton: UIButton {
+class PinkButton: UIButton {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -31,8 +31,10 @@ class CommentButton: UIButton {
         self.layer.shadowColor = UIColor.black.cgColor
         self.layer.shadowOffset = CGSize(width: 0, height: 4)
         self.layer.shadowOpacity = 0.5
+    }
 
-        self.setTitle("COMMENT", for: .normal)
+    func configure(title: String) {
+        self.setTitle(title, for: .normal)
     }
 
     override func layoutSubviews() {

@@ -10,7 +10,7 @@ import UIKit
 
 class ChatViewController: UIViewController, UITableViewDataSource {
 
-    @IBOutlet weak var commentButton: CommentButton!
+    @IBOutlet weak var commentButton: PinkButton!
     @IBOutlet weak var textHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var textView: TextView!
     @IBOutlet weak var sendButton: UIButton!
@@ -27,7 +27,7 @@ class ChatViewController: UIViewController, UITableViewDataSource {
         self.interactor.fetchMessages(item: item) { (_) in
             self.tableView.reloadData()
         }
-        self.navigationItem.title = conversation.item_name
+        self.navigationItem.title = item.item_name
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -45,6 +45,8 @@ class ChatViewController: UIViewController, UITableViewDataSource {
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.separatorStyle = .none
         self.tableView.separatorInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
+
+        self.commentButton.configure(title: "Comment")
 
         self.sendButton.addTarget(self, action: #selector(sendPressed), for: .touchUpInside)
         self.commentButton.addTarget(self, action: #selector(commentPressed), for: .touchUpInside)

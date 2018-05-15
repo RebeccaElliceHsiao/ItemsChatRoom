@@ -17,12 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         CoreDataManager.setUpCoreDataStack()
-
-
-        let nav = UINavigationController(rootViewController: DisplayItemsViewController())
         
         self.window = UIWindow()
-        self.window?.rootViewController = nav
+        self.window?.rootViewController = EnterUserNameVC()
         self.window?.makeKeyAndVisible()
         return true
     }

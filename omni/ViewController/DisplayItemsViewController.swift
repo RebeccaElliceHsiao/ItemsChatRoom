@@ -25,7 +25,7 @@ class DisplayItemsViewController: UIViewController, UICollectionViewDataSource, 
         collectionView.delegate = self
 
         headerLabel.textAlignment = .center
-        headerLabel.text = "Try tapping your favorite!"
+        headerLabel.text = "Welcome \(User.currentUser ?? "")"
 
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.itemSize = CGSize(width: self.view.bounds.width/2 - 15, height: self.view.bounds.width/2 - 15)

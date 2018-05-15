@@ -58,7 +58,7 @@
                         <constraint firstItem="N8a-Ih-7Ix" firstAttribute="leading" secondItem="qF9-x9-nBA" secondAttribute="trailing" constant="5" id="vIQ-QU-sqI"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="302-5f-uKg" customClass="CommentButton" customModule="omni" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="302-5f-uKg" customClass="PinkButton" customModule="omni" customModuleProvider="target">
                     <rect key="frame" x="164.5" y="597" width="46" height="30"/>
                     <state key="normal" title="Button"/>
                 </button>
