@@ -16,6 +16,7 @@ class Message: NSManagedObject, FetchOrCreatable {
     @NSManaged var id: String
     @NSManaged var text: String?
     @NSManaged var creator: String?
+    @NSManaged var timestamp: Date?
 
     @NSManaged var post: Post?
 
@@ -31,6 +32,11 @@ class Message: NSManagedObject, FetchOrCreatable {
         }
         if let creator = dict["creator"] as? String {
             self.creator = creator
+        }
+        if let timestamp = dict["time_created"] as? String {
+            if let date = Date.isoDate(from: timestamp) {
+                self.timestamp = date
+            }
         }
     }
 

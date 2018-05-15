@@ -21,7 +21,6 @@ class Post: NSManagedObject {
     @NSManaged var flexibleHours: Bool
     @NSManaged var location: String?
     @NSManaged var additionalNotes: String?
-    @NSManaged var timestamp: Date?
     @NSManaged var creator: String?
 
     @NSManaged var item: Item?
@@ -51,11 +50,6 @@ class Post: NSManagedObject {
         }
         if let creator = dict["creator"] as? String {
             self.creator = creator
-        }
-        if let timestamp = dict["time_created"] as? String {
-            if let date = Date.isoDate(from: timestamp) {
-                self.timestamp = date
-            }
         }
     }
 

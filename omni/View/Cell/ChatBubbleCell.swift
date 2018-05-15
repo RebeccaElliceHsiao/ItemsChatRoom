@@ -13,6 +13,8 @@ class ChatBubbleCell: UITableViewCell {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var textContainerView: UIView!
     @IBOutlet weak var chatTextLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var lastSeenLabel: UILabel!
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -21,6 +23,10 @@ class ChatBubbleCell: UITableViewCell {
 
     func configure(message: Message) {
         self.chatTextLabel.text = message.text
+        self.nameLabel.text = message.creator
+        if let date = message.timestamp {
+            self.lastSeenLabel.text = date.timeAgoSinceDate(numericDates: true)
+        }
         self.setNeedsLayout()
         self.layoutIfNeeded()
     }
