@@ -21,6 +21,7 @@ class Post: NSManagedObject {
     @NSManaged var location: String?
     @NSManaged var additionalNotes: String?
     @NSManaged var timestamp: Date?
+    @NSManaged var creator: String?
 
     @NSManaged var item: Item?
     @NSManaged var messages: NSMutableOrderedSet?
@@ -46,6 +47,9 @@ class Post: NSManagedObject {
         }
         if let additionalNotes = dict["additional_notes"] as? String {
             self.additionalNotes = additionalNotes
+        }
+        if let creator = dict["creator"] as? String {
+            self.creator = creator
         }
         if let timestamp = dict["time_created"] as? String {
             if let date = Date.isoDate(from: timestamp) {
@@ -77,6 +81,9 @@ class Post: NSManagedObject {
         }
         if let item_id = self.item?.id {
             dict["item_id"] = item_id
+        }
+        if let creator = self.creator {
+            dict["creator"] = creator
         }
         return dict
     }

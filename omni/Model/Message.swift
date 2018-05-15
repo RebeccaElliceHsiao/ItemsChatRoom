@@ -15,6 +15,8 @@ class Message: NSManagedObject, FetchOrCreatable {
 
     @NSManaged var id: String
     @NSManaged var text: String?
+    @NSManaged var creator: String?
+
     @NSManaged var post: Post?
 
     func parse(dict: [String: Any]) {
@@ -26,6 +28,9 @@ class Message: NSManagedObject, FetchOrCreatable {
         }
         if let text = dict["text"] as? String {
             self.text = text
+        }
+        if let creator = dict["creator"] as? String {
+            self.creator = creator
         }
     }
 
@@ -40,6 +45,9 @@ class Message: NSManagedObject, FetchOrCreatable {
         }
         if let post_id = self.post?.id {
             dict["post_id"] = post_id
+        }
+        if let creator = self.creator {
+            dict["creator"] = creator
         }
         return dict
     }
