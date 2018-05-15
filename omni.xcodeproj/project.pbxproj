@@ -58,6 +58,8 @@
 		8CD9D3B720AA8D0900B4B54D /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD9D3B520AA8D0900B4B54D /* PostCell.swift */; };
 		8CD9D3B820AA8D0900B4B54D /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CD9D3B620AA8D0900B4B54D /* PostCell.xib */; };
 		8CD9D3BA20AA8EB500B4B54D /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD9D3B920AA8EB500B4B54D /* Font.swift */; };
+		8CD9D3BC20AA928000B4B54D /* DateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD9D3BB20AA928000B4B54D /* DateView.swift */; };
+		8CD9D3BE20AA92BF00B4B54D /* DateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CD9D3BD20AA92BF00B4B54D /* DateView.xib */; };
 		EEA10860650D112AFC1084F1 /* Pods_omni.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F334D3E3C254D3D41F2A7875 /* Pods_omni.framework */; };
 /* End PBXBuildFile section */
 
@@ -137,6 +139,8 @@
 		8CD9D3B520AA8D0900B4B54D /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		8CD9D3B620AA8D0900B4B54D /* PostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
 		8CD9D3B920AA8EB500B4B54D /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		8CD9D3BB20AA928000B4B54D /* DateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateView.swift; sourceTree = "<group>"; };
+		8CD9D3BD20AA92BF00B4B54D /* DateView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateView.xib; sourceTree = "<group>"; };
 		EDF789B7B5139F33FB2F4A6C /* Pods-omni.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-omni.debug.xcconfig"; path = "Pods/Target Support Files/Pods-omni/Pods-omni.debug.xcconfig"; sourceTree = "<group>"; };
 		F0347588564B22953A62F14E /* Pods_omniUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_omniUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F334505AC42829F132B6059D /* Pods-omni.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-omni.release.xcconfig"; path = "Pods/Target Support Files/Pods-omni/Pods-omni.release.xcconfig"; sourceTree = "<group>"; };
@@ -313,15 +317,13 @@
 		8CCC0850209F055D0048829A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8CD9D3BF20AA933A00B4B54D /* Form */,
 				8CCC0851209F05640048829A /* Cell */,
 				8CCC0856209F074B0048829A /* ImageView.swift */,
+				8CD9D3BB20AA928000B4B54D /* DateView.swift */,
+				8CD9D3BD20AA92BF00B4B54D /* DateView.xib */,
 				8C3D4F75209F3F6A00262382 /* TextView.swift */,
-				8CD9D3AF20AA7B9900B4B54D /* LabelAndTextInputView.swift */,
-				8CD9D3B120AA7BEB00B4B54D /* LabelAndTextInputView.xib */,
 				8C3D4F77209F421500262382 /* PinkButton.swift */,
-				8CD9D3A320AA71FC00B4B54D /* RadioButton.swift */,
-				8CD9D3A720AA730100B4B54D /* RadioButton.xib */,
-				8CD9D3AD20AA78E600B4B54D /* PostForm.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -337,6 +339,18 @@
 				8CD9D3B620AA8D0900B4B54D /* PostCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		8CD9D3BF20AA933A00B4B54D /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				8CD9D3A320AA71FC00B4B54D /* RadioButton.swift */,
+				8CD9D3A720AA730100B4B54D /* RadioButton.xib */,
+				8CD9D3AD20AA78E600B4B54D /* PostForm.swift */,
+				8CD9D3AF20AA7B9900B4B54D /* LabelAndTextInputView.swift */,
+				8CD9D3B120AA7BEB00B4B54D /* LabelAndTextInputView.xib */,
+			);
+			path = Form;
 			sourceTree = "<group>";
 		};
 		EA9795CF87336A2A37AB1E8F /* Frameworks */ = {
@@ -459,6 +473,7 @@
 				8CCC083C209EDE8F0048829A /* items.json in Resources */,
 				8C892D21209F177D003EBA96 /* ChatViewController.xib in Resources */,
 				8CD9D3B820AA8D0900B4B54D /* PostCell.xib in Resources */,
+				8CD9D3BE20AA92BF00B4B54D /* DateView.xib in Resources */,
 				8CCC0805209ED80F0048829A /* LaunchScreen.storyboard in Resources */,
 				8CD9D39C20AA6BE700B4B54D /* MakePostVC.xib in Resources */,
 				8CCC0802209ED80F0048829A /* Assets.xcassets in Resources */,
@@ -538,6 +553,7 @@
 				8CCC0854209F05780048829A /* ItemImageCell.swift in Sources */,
 				8CD9D3B420AA883000B4B54D /* PostInteractor.swift in Sources */,
 				8CD9D38820AA542900B4B54D /* EnterUserNameVC.swift in Sources */,
+				8CD9D3BC20AA928000B4B54D /* DateView.swift in Sources */,
 				8CCC084A209EF8B10048829A /* Network.swift in Sources */,
 				8CCC0834209EDDA50048829A /* JsonLoader.swift in Sources */,
 				8CCC084E209EFE3A0048829A /* Interactor.swift in Sources */,
