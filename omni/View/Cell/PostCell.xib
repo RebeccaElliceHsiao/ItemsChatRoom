@@ -31,6 +31,14 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Tp-9j-A4o" customClass="DateView" customModule="omni" customModuleProvider="target">
+                                        <rect key="frame" x="230" y="10" width="40" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="enk-af-Ghl"/>
+                                            <constraint firstAttribute="height" constant="40" id="fxH-Wx-ff7"/>
+                                        </constraints>
+                                    </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTZ-Sk-Wpl">
                                         <rect key="frame" x="18" y="14" width="34" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -43,7 +51,9 @@
                                     <constraint firstItem="NTZ-Sk-Wpl" firstAttribute="top" secondItem="S30-ed-eQh" secondAttribute="top" constant="14" id="Cjg-Rz-E51"/>
                                     <constraint firstItem="NTZ-Sk-Wpl" firstAttribute="leading" secondItem="S30-ed-eQh" secondAttribute="leading" constant="18" id="GdX-VP-xSe"/>
                                     <constraint firstItem="p86-n2-Alc" firstAttribute="leading" secondItem="S30-ed-eQh" secondAttribute="leading" constant="18" id="Lxb-T1-gT8"/>
+                                    <constraint firstAttribute="trailing" secondItem="0Tp-9j-A4o" secondAttribute="trailing" constant="10" id="dBQ-5z-Amw"/>
                                     <constraint firstItem="p86-n2-Alc" firstAttribute="top" secondItem="NTZ-Sk-Wpl" secondAttribute="bottom" constant="2" id="eiv-aA-jTe"/>
+                                    <constraint firstItem="0Tp-9j-A4o" firstAttribute="top" secondItem="S30-ed-eQh" secondAttribute="top" constant="10" id="f4K-jB-5HM"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -67,6 +77,7 @@
             <connections>
                 <outlet property="backView" destination="wWF-0u-57T" id="7lu-So-Iiw"/>
                 <outlet property="bodyLabel" destination="p86-n2-Alc" id="tyr-BU-zgB"/>
+                <outlet property="dateView" destination="0Tp-9j-A4o" id="CPG-b9-hVJ"/>
                 <outlet property="titleLabel" destination="NTZ-Sk-Wpl" id="pl3-pT-anv"/>
             </connections>
             <point key="canvasLocation" x="34" y="67.5"/>

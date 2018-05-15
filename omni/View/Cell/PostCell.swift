@@ -13,6 +13,7 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bodyLabel: UILabel!
     @IBOutlet weak var backView: UIView!
+    @IBOutlet weak var dateView: DateView!
     
     func configure(with post: Post) {
 
@@ -20,6 +21,8 @@ class PostCell: UITableViewCell {
         self.bodyLabel.text = "\(post.text ?? "...")"
         self.titleLabel.attributedText = post.posterWithPostTypeAttributedString()
         self.backView.layer.cornerRadius = 8
+
+        dateView.configure(start: post.from, end: post.to)
 
         if post is Request {
             backView.backgroundColor = #colorLiteral(red: 0.9993898273, green: 0.1007643119, blue: 0.3069936335, alpha: 1)
