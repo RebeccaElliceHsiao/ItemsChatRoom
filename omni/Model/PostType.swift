@@ -6,4 +6,18 @@
 //  Copyright © 2018年 Rebecca Hsiao. All rights reserved.
 //
 
-import Foundation
+enum PostType {
+    case request, offer, event
+
+    func name() -> String {
+        switch self {
+        case .request:
+            return "Request"
+        case .offer:
+            return "Offer"
+        case .event:
+            return "Event"
+        }
+    }
+
+}

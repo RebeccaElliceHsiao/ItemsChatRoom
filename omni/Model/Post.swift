@@ -80,4 +80,12 @@ class Post: NSManagedObject {
         }
         return dict
     }
+
+    func postType() -> PostType {
+        if self is Request {
+            return .request
+        } else if self is Offer {
+            return .offer
+        }
+    }
 }
