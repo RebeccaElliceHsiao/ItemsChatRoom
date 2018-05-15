@@ -17,14 +17,14 @@ class ChatViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var tableView: UITableView!
     
-    var conversation: Conversation
+    var item: Item
     var isTyping = false
     let interactor = MessageInteractor()
 
-    init(conversation: Conversation) {
-        self.conversation = conversation
+    init(item: Item) {
+        self.item = item
         super.init(nibName: nil, bundle: nil)
-        self.interactor.fetchMessages(conversation: conversation) { (_) in
+        self.interactor.fetchMessages(item: item) { (_) in
             self.tableView.reloadData()
         }
         self.navigationItem.title = conversation.item_name
@@ -64,11 +64,11 @@ class ChatViewController: UIViewController, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.conversation.messages?.count ?? 0
+        return self.item.messages?.count ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let message = conversation.messages?[indexPath.row] as? Message else { return UITableViewCell() }
+        guard let message = item.messages?[indexPath.row] as? Message else { return UITableViewCell() }
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "ChatBubbleCell") as! ChatBubbleCell
         cell.configure(message: message)
         return cell
@@ -93,7 +93,7 @@ class ChatViewController: UIViewController, UITableViewDataSource {
 
     @objc func sendPressed() {
         let message = Message.createNew()
-        message.conversation = conversation
+        message.conversation = item
         message.text = self.textView.text ?? ""
         self.interactor.createMessage(message: message, completionHandler: { (message, _) in
             self.screenWasTapped()

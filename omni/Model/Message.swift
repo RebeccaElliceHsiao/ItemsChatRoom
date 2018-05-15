@@ -15,7 +15,7 @@ class Message: NSManagedObject, FetchOrCreatable {
 
     @NSManaged var id: String
     @NSManaged var text: String?
-    @NSManaged var conversation: Conversation?
+    @NSManaged var post: Post?
 
     func parse(dict: [String: Any]) {
         if let id = dict["id"] as? String {
@@ -38,10 +38,9 @@ class Message: NSManagedObject, FetchOrCreatable {
         if let text = self.text {
             dict["text"] = text
         }
-        if let item_id = self.conversation?.id {
-            dict["item_id"] = item_id
+        if let post_id = self.post?.id {
+            dict["post_id"] = post_id
         }
-
         return dict
     }
 

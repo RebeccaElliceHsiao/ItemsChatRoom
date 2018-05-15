@@ -13,7 +13,7 @@ class Interactor {
         if let data = data as? [[String: Any]] {
             for objectDict in data {
                 if objectDict["name"] != nil || objectDict["favorited"] != nil {
-                    let item = Conversation.fetchOrCreate(with: objectDict)
+                    let item = Item.fetchOrCreate(with: objectDict)
                     objects.append(item)
                 } else {
                     let comment = Message.fetchOrCreate(with: objectDict)
@@ -40,7 +40,7 @@ class Interactor {
 
     func processEdges(data: [[String: Any]]) {
         guard let itemID = data.first?["item_id"] as? String else { return }
-        guard let item = Conversation.fetch(with: itemID)  else { return }
+        guard let item = Item.fetch(with: itemID)  else { return }
         item.messages = nil
         for dict in data {
             guard let commentid = dict["id"] as? Int else { continue }

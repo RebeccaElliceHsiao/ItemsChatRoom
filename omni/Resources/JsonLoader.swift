@@ -9,10 +9,10 @@
 import Foundation
 import CoreData
 
-func populateItems() -> [Conversation] {
+func populateItems() -> [Item] {
 
     let jsonData = loadData(fromFile: "items")
-    if let items = Interactor().fetchOrCreateObjects(from: jsonData) as? [Conversation] {
+    if let items = Interactor().fetchOrCreateObjects(from: jsonData) as? [Item] {
         return items
     }
     return []

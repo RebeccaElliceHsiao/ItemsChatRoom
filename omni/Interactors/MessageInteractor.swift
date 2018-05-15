@@ -28,8 +28,8 @@ class MessageInteractor: Interactor {
         }
     }
 
-    func fetchMessages(conversation: Conversation, completionHandler:@escaping ((Error?) -> Void)) {
-        let params: [String: Any] = ["id": conversation.id]
+    func fetchMessages(item: Item, completionHandler:@escaping ((Error?) -> Void)) {
+        let params: [String: Any] = ["id": item.id]
         let path = "item"
         var request = NetworkRequest(method: .get, path: path)
 

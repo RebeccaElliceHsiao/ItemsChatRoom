@@ -9,16 +9,16 @@
 import CoreData
 import UIKit
 
-@objc(Conversation)
-class Conversation: NSManagedObject, FetchOrCreatable{
+@objc(Item)
+class Item: NSManagedObject, FetchOrCreatable{
 
-    typealias T = Conversation
+    typealias T = Item
 
     @NSManaged var id: String
     @NSManaged var item_name: String?
     @NSManaged var item_photo_url: String?
 
-    @NSManaged var messages: NSMutableOrderedSet?
+    @NSManaged var posts: NSMutableOrderedSet?
 
     var image: UIImage?
 

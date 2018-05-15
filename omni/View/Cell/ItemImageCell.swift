@@ -21,7 +21,7 @@ class ItemImageCell: UICollectionViewCell {
         self.layer.borderColor = UIColor.lightGray.cgColor
     }
 
-    func configure(with item: Conversation) {
+    func configure(with item: Item) {
         if let name = item.item_name {
             self.label.text = name
         }
