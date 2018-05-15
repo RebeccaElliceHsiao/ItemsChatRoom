@@ -36,6 +36,18 @@ class Item_sPostsVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         self.creatPostButton.addTarget(self, action: #selector(createPostPressed), for: .touchUpInside)
     }
 
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return item.posts?.count ?? 0
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        return UITableViewCell()
+    }
+
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        
+    }
+
     @objc func createPostPressed() {
 
     }
