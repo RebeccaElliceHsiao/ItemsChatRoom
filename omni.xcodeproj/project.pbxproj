@@ -46,6 +46,14 @@
 		8CD9D39C20AA6BE700B4B54D /* MakePostVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CD9D39A20AA6BE700B4B54D /* MakePostVC.xib */; };
 		8CD9D3A020AA6C5100B4B54D /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD9D39F20AA6C5100B4B54D /* Request.swift */; };
 		8CD9D3A220AA6C5A00B4B54D /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD9D3A120AA6C5A00B4B54D /* Offer.swift */; };
+		8CD9D3A420AA71FC00B4B54D /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD9D3A320AA71FC00B4B54D /* RadioButton.swift */; };
+		8CD9D3A620AA723700B4B54D /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD9D3A520AA723700B4B54D /* Color.swift */; };
+		8CD9D3A820AA730100B4B54D /* RadioButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CD9D3A720AA730100B4B54D /* RadioButton.xib */; };
+		8CD9D3AA20AA761C00B4B54D /* PostType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD9D3A920AA761C00B4B54D /* PostType.swift */; };
+		8CD9D3AC20AA778400B4B54D /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD9D3AB20AA778400B4B54D /* Button.swift */; };
+		8CD9D3AE20AA78E600B4B54D /* PostForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD9D3AD20AA78E600B4B54D /* PostForm.swift */; };
+		8CD9D3B020AA7B9900B4B54D /* LabelAndTextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD9D3AF20AA7B9900B4B54D /* LabelAndTextInputView.swift */; };
+		8CD9D3B220AA7BEB00B4B54D /* LabelAndTextInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CD9D3B120AA7BEB00B4B54D /* LabelAndTextInputView.xib */; };
 		EEA10860650D112AFC1084F1 /* Pods_omni.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F334D3E3C254D3D41F2A7875 /* Pods_omni.framework */; };
 /* End PBXBuildFile section */
 
@@ -113,6 +121,14 @@
 		8CD9D39A20AA6BE700B4B54D /* MakePostVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MakePostVC.xib; sourceTree = "<group>"; };
 		8CD9D39F20AA6C5100B4B54D /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		8CD9D3A120AA6C5A00B4B54D /* Offer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
+		8CD9D3A320AA71FC00B4B54D /* RadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
+		8CD9D3A520AA723700B4B54D /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		8CD9D3A720AA730100B4B54D /* RadioButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RadioButton.xib; sourceTree = "<group>"; };
+		8CD9D3A920AA761C00B4B54D /* PostType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostType.swift; sourceTree = "<group>"; };
+		8CD9D3AB20AA778400B4B54D /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		8CD9D3AD20AA78E600B4B54D /* PostForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostForm.swift; sourceTree = "<group>"; };
+		8CD9D3AF20AA7B9900B4B54D /* LabelAndTextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelAndTextInputView.swift; sourceTree = "<group>"; };
+		8CD9D3B120AA7BEB00B4B54D /* LabelAndTextInputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelAndTextInputView.xib; sourceTree = "<group>"; };
 		EDF789B7B5139F33FB2F4A6C /* Pods-omni.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-omni.debug.xcconfig"; path = "Pods/Target Support Files/Pods-omni/Pods-omni.debug.xcconfig"; sourceTree = "<group>"; };
 		F0347588564B22953A62F14E /* Pods_omniUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_omniUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F334505AC42829F132B6059D /* Pods-omni.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-omni.release.xcconfig"; path = "Pods/Target Support Files/Pods-omni/Pods-omni.release.xcconfig"; sourceTree = "<group>"; };
@@ -223,6 +239,7 @@
 				8CD9D38E20AA631200B4B54D /* User.swift */,
 				8CD9D39F20AA6C5100B4B54D /* Request.swift */,
 				8CD9D3A120AA6C5A00B4B54D /* Offer.swift */,
+				8CD9D3A920AA761C00B4B54D /* PostType.swift */,
 				8CCC0846209EF7930048829A /* FetchOrCreatable.swift */,
 				8CCC082B209EDA160048829A /* CoreDataManager.swift */,
 				8CCC082D209EDA420048829A /* omni.xcdatamodeld */,
@@ -234,6 +251,8 @@
 			isa = PBXGroup;
 			children = (
 				8CD9D38C20AA625900B4B54D /* Date.swift */,
+				8CD9D3A520AA723700B4B54D /* Color.swift */,
+				8CD9D3AB20AA778400B4B54D /* Button.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -287,7 +306,12 @@
 				8CCC0851209F05640048829A /* Cell */,
 				8CCC0856209F074B0048829A /* ImageView.swift */,
 				8C3D4F75209F3F6A00262382 /* TextView.swift */,
+				8CD9D3AF20AA7B9900B4B54D /* LabelAndTextInputView.swift */,
+				8CD9D3B120AA7BEB00B4B54D /* LabelAndTextInputView.xib */,
 				8C3D4F77209F421500262382 /* PinkButton.swift */,
+				8CD9D3A320AA71FC00B4B54D /* RadioButton.swift */,
+				8CD9D3A720AA730100B4B54D /* RadioButton.xib */,
+				8CD9D3AD20AA78E600B4B54D /* PostForm.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -426,9 +450,11 @@
 				8CD9D39C20AA6BE700B4B54D /* MakePostVC.xib in Resources */,
 				8CCC0802209ED80F0048829A /* Assets.xcassets in Resources */,
 				8CCC0845209EF6190048829A /* DisplayItemsViewController.xib in Resources */,
+				8CD9D3A820AA730100B4B54D /* RadioButton.xib in Resources */,
 				8CD9D38920AA542900B4B54D /* EnterUserNameVC.xib in Resources */,
 				8CD9D39820AA68AC00B4B54D /* Item'sPostsVC.xib in Resources */,
 				8CCC0800209ED80B0048829A /* Main.storyboard in Resources */,
+				8CD9D3B220AA7BEB00B4B54D /* LabelAndTextInputView.xib in Resources */,
 				8C892D27209F2769003EBA96 /* ChatBubbleCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -502,10 +528,12 @@
 				8CCC084E209EFE3A0048829A /* Interactor.swift in Sources */,
 				8CCC0857209F074B0048829A /* ImageView.swift in Sources */,
 				8CCC07FD209ED80B0048829A /* ViewController.swift in Sources */,
+				8CD9D3A420AA71FC00B4B54D /* RadioButton.swift in Sources */,
 				8CCC07FB209ED80B0048829A /* AppDelegate.swift in Sources */,
 				8C892D1B209F11A2003EBA96 /* Item.swift in Sources */,
 				8CCC082C209EDA160048829A /* CoreDataManager.swift in Sources */,
 				8CD9D38F20AA631200B4B54D /* User.swift in Sources */,
+				8CD9D3AE20AA78E600B4B54D /* PostForm.swift in Sources */,
 				8CCC0844209EF6190048829A /* DisplayItemsViewController.swift in Sources */,
 				8C892D23209F1820003EBA96 /* MessageInteractor.swift in Sources */,
 				8C3D4F76209F3F6A00262382 /* TextView.swift in Sources */,
@@ -513,8 +541,12 @@
 				8CD9D39720AA68AC00B4B54D /* Item'sPostsVC.swift in Sources */,
 				8C892D20209F177D003EBA96 /* ChatViewController.swift in Sources */,
 				8CCC082F209EDA420048829A /* omni.xcdatamodeld in Sources */,
+				8CD9D3AA20AA761C00B4B54D /* PostType.swift in Sources */,
+				8CD9D3A620AA723700B4B54D /* Color.swift in Sources */,
 				8CD9D38D20AA625900B4B54D /* Date.swift in Sources */,
+				8CD9D3B020AA7B9900B4B54D /* LabelAndTextInputView.swift in Sources */,
 				8CCC082A209ED9BE0048829A /* Message.swift in Sources */,
+				8CD9D3AC20AA778400B4B54D /* Button.swift in Sources */,
 				8CCC0847209EF7930048829A /* FetchOrCreatable.swift in Sources */,
 				8C3D4F78209F421500262382 /* PinkButton.swift in Sources */,
 				8CD9D3A220AA6C5A00B4B54D /* Offer.swift in Sources */,
