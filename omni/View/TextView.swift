@@ -87,6 +87,15 @@ class TextView: UITextView, UITextViewDelegate {
         self.textViewDelegate?.textViewDidBeginEditing?(textView)
     }
 
+    func growableTextView(heightConstraint: NSLayoutConstraint?, maxHeight: CGFloat? = nil) {
+        self.delegate = self
+        self.heightConstraint = heightConstraint
+        if let height = self.heightConstraint?.constant {
+            self.originalHeight = height
+        }
+        self.maxHeight = maxHeight
+    }
+
     private func resizePlaceholder() {
         if let placeholderLabel = self.viewWithTag(100) as! UILabel? {
             let labelX = self.textContainer.lineFragmentPadding
@@ -116,15 +125,6 @@ class TextView: UITextView, UITextViewDelegate {
             self.textViewDelegate = originalDelegate
         }
         self.delegate = self
-    }
-
-    private func growableTextView(heightConstraint: NSLayoutConstraint?, maxHeight: CGFloat? = nil) {
-        self.delegate = self
-        self.heightConstraint = heightConstraint
-        if let height = self.heightConstraint?.constant {
-            self.originalHeight = height
-        }
-        self.maxHeight = maxHeight
     }
 
     private func supportGrowth() {
