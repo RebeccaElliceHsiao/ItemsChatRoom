@@ -53,8 +53,8 @@ class LabelAndTextInputView: UIView {
         toolbar.items = [flexibleSeparator, doneButton]
         self.textView.inputAccessoryView = toolbar
 
-        self.label.font = UIFont.alloBoldFont(size: 9.0)
-        self.label.textColor = UIColor.alloGrayText
+        self.label.font = UIFont.boldFont(size: 9)
+        self.label.textColor = UIColor.darkGray
     }
 
     var required: Bool = false {
