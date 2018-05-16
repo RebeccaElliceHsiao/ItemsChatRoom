@@ -7,7 +7,7 @@
 //
 
 enum PostType {
-    case request, offer, event
+    case request, offer
 
     func name() -> String {
         switch self {
