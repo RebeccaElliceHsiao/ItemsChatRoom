@@ -157,7 +157,6 @@ class MakeEventVC: UIViewController {
         let post = self.form.makePost()
         self.interactor.createPost(post: post) { (post, error) in
             self.dismiss(animated: true, completion: nil)
-            self.delegate?.makeEventDidDismiss(vc: self)
         }
     }
 

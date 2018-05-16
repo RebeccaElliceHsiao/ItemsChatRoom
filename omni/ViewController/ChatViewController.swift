@@ -22,12 +22,12 @@ class ChatViewController: UIViewController, UITableViewDataSource {
     let interactor = MessageInteractor()
 
     init(post: Post) {
-        self.item = post
+        self.post = post
         super.init(nibName: nil, bundle: nil)
         self.interactor.fetchMessages(post: post) { (_) in
             self.tableView.reloadData()
         }
-        self.navigationItem.title = post.item_name
+        self.navigationItem.title = post.item?.item_name ?? "Special Item"
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -66,7 +66,7 @@ class ChatViewController: UIViewController, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.item.messages?.count ?? 0
+        return self.post.messages?.count ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -60,7 +60,7 @@ class EachItemPostsVC: UIViewController, UITableViewDataSource, UITableViewDeleg
     }
 
     @objc func createPostPressed() {
-        let vc = MakeEventVC(post: post)
+        let vc = MakeEventVC(post: nil)
         self.present(vc, animated: true, completion: nil)
     }
 
