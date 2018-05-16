@@ -89,10 +89,10 @@ class Post: NSManagedObject {
     }
 
     func postType() -> PostType {
-        if self is Request {
-            return .request
-        } else if self is Offer {
+        if self is Offer {
             return .offer
+        } else {
+            return .request
         }
     }
 
