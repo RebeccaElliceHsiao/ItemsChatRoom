@@ -33,4 +33,10 @@ extension UIColor {
             return UIColor(red: 1.0, green: 45.0/255.0, blue: 85.0/255.0, alpha: 1.0)
         }
     }
+
+    class var border: UIColor {
+        get {
+            return UIColor(white: 0.7, alpha: 0.5)
+        }
+    }
 }

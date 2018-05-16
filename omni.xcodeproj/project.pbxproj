@@ -14,6 +14,7 @@
 		8C02109B20AC081A0011A46F /* GothaProMed.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8C02109420AC081A0011A46F /* GothaProMed.otf */; };
 		8C02109C20AC081A0011A46F /* AvenirNextLTPro-It.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8C02109520AC081A0011A46F /* AvenirNextLTPro-It.otf */; };
 		8C02109D20AC081A0011A46F /* AvenirNextLTPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8C02109620AC081A0011A46F /* AvenirNextLTPro-Regular.otf */; };
+		8C02109F20AC11C60011A46F /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C02109E20AC11C60011A46F /* View.swift */; };
 		8C3D4F76209F3F6A00262382 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3D4F75209F3F6A00262382 /* TextView.swift */; };
 		8C3D4F78209F421500262382 /* PinkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3D4F77209F421500262382 /* PinkButton.swift */; };
 		8C892D1B209F11A2003EBA96 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C892D1A209F11A2003EBA96 /* Item.swift */; };
@@ -96,6 +97,7 @@
 		8C02109420AC081A0011A46F /* GothaProMed.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothaProMed.otf; sourceTree = "<group>"; };
 		8C02109520AC081A0011A46F /* AvenirNextLTPro-It.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNextLTPro-It.otf"; sourceTree = "<group>"; };
 		8C02109620AC081A0011A46F /* AvenirNextLTPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNextLTPro-Regular.otf"; sourceTree = "<group>"; };
+		8C02109E20AC11C60011A46F /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		8C3D4F75209F3F6A00262382 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		8C3D4F77209F421500262382 /* PinkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinkButton.swift; sourceTree = "<group>"; };
 		8C892D1A209F11A2003EBA96 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
@@ -295,6 +297,7 @@
 				8CD9D3A520AA723700B4B54D /* Color.swift */,
 				8CD9D3AB20AA778400B4B54D /* Button.swift */,
 				8CD9D3B920AA8EB500B4B54D /* Font.swift */,
+				8C02109E20AC11C60011A46F /* View.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -596,6 +599,7 @@
 				8CD9D3BC20AA928000B4B54D /* DateView.swift in Sources */,
 				8CCC084A209EF8B10048829A /* Network.swift in Sources */,
 				8CCC0834209EDDA50048829A /* JsonLoader.swift in Sources */,
+				8C02109F20AC11C60011A46F /* View.swift in Sources */,
 				8CCC084E209EFE3A0048829A /* Interactor.swift in Sources */,
 				8CCC0857209F074B0048829A /* ImageView.swift in Sources */,
 				8CCC07FD209ED80B0048829A /* ViewController.swift in Sources */,

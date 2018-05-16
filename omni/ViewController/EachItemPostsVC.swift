@@ -50,6 +50,7 @@ class EachItemPostsVC: UIViewController, UITableViewDataSource, UITableViewDeleg
                 return UITableViewCell()
         }
         cell.configure(with: post)
+        return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
