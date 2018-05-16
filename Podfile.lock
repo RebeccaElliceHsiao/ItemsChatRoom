@@ -1,16 +1,24 @@
 PODS:
   - Alamofire (4.7.2)
+  - Cartography (3.0.1)
+  - Eureka (4.1.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
+  - Cartography (~> 3.0.1)
+  - Eureka (~> 4.1.1)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
+    - Cartography
+    - Eureka
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  Cartography: f8c899bb0f5cf20758644a8eea59a75e98a03a5d
+  Eureka: b88fb930e42c79f8c03c373d0fcdc28c1d6c50ed
 
-PODFILE CHECKSUM: 8fb1e94bf42d77c0f90b9c42f58d88407233b8d7
+PODFILE CHECKSUM: 6c6f8ebe5e741f63535e612b141ca016e3402db5
 
 COCOAPODS: 1.5.0

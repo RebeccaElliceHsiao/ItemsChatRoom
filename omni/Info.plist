@@ -41,5 +41,15 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>GothaProLig.otf</string>
+		<string>GothaProBol.otf</string>
+		<string>GothaProReg.otf</string>
+		<string>AvenirNextLTPro-Bold.otf</string>
+		<string>GothaProMed.otf</string>
+		<string>AvenirNextLTPro-It.otf</string>
+		<string>AvenirNextLTPro-Regular.otf</string>
+	</array>
 </dict>
 </plist>

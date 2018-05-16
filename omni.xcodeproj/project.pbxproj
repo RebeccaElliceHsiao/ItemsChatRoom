@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C02109720AC081A0011A46F /* GothaProLig.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8C02109020AC081A0011A46F /* GothaProLig.otf */; };
+		8C02109820AC081A0011A46F /* GothaProBol.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8C02109120AC081A0011A46F /* GothaProBol.otf */; };
+		8C02109920AC081A0011A46F /* GothaProReg.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8C02109220AC081A0011A46F /* GothaProReg.otf */; };
+		8C02109A20AC081A0011A46F /* AvenirNextLTPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8C02109320AC081A0011A46F /* AvenirNextLTPro-Bold.otf */; };
+		8C02109B20AC081A0011A46F /* GothaProMed.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8C02109420AC081A0011A46F /* GothaProMed.otf */; };
+		8C02109C20AC081A0011A46F /* AvenirNextLTPro-It.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8C02109520AC081A0011A46F /* AvenirNextLTPro-It.otf */; };
+		8C02109D20AC081A0011A46F /* AvenirNextLTPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8C02109620AC081A0011A46F /* AvenirNextLTPro-Regular.otf */; };
 		8C3D4F76209F3F6A00262382 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3D4F75209F3F6A00262382 /* TextView.swift */; };
 		8C3D4F78209F421500262382 /* PinkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3D4F77209F421500262382 /* PinkButton.swift */; };
 		8C892D1B209F11A2003EBA96 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C892D1A209F11A2003EBA96 /* Item.swift */; };
@@ -82,6 +89,13 @@
 
 /* Begin PBXFileReference section */
 		4224CA45F91104AAAF8437C7 /* Pods_omniTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_omniTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C02109020AC081A0011A46F /* GothaProLig.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothaProLig.otf; sourceTree = "<group>"; };
+		8C02109120AC081A0011A46F /* GothaProBol.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothaProBol.otf; sourceTree = "<group>"; };
+		8C02109220AC081A0011A46F /* GothaProReg.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothaProReg.otf; sourceTree = "<group>"; };
+		8C02109320AC081A0011A46F /* AvenirNextLTPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNextLTPro-Bold.otf"; sourceTree = "<group>"; };
+		8C02109420AC081A0011A46F /* GothaProMed.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothaProMed.otf; sourceTree = "<group>"; };
+		8C02109520AC081A0011A46F /* AvenirNextLTPro-It.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNextLTPro-It.otf"; sourceTree = "<group>"; };
+		8C02109620AC081A0011A46F /* AvenirNextLTPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNextLTPro-Regular.otf"; sourceTree = "<group>"; };
 		8C3D4F75209F3F6A00262382 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		8C3D4F77209F421500262382 /* PinkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinkButton.swift; sourceTree = "<group>"; };
 		8C892D1A209F11A2003EBA96 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
@@ -182,6 +196,20 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8C02108F20AC081A0011A46F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				8C02109020AC081A0011A46F /* GothaProLig.otf */,
+				8C02109120AC081A0011A46F /* GothaProBol.otf */,
+				8C02109220AC081A0011A46F /* GothaProReg.otf */,
+				8C02109320AC081A0011A46F /* AvenirNextLTPro-Bold.otf */,
+				8C02109420AC081A0011A46F /* GothaProMed.otf */,
+				8C02109520AC081A0011A46F /* AvenirNextLTPro-It.otf */,
+				8C02109620AC081A0011A46F /* AvenirNextLTPro-Regular.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		8CCC07EE209ED80B0048829A = {
 			isa = PBXGroup;
 			children = (
@@ -211,8 +239,9 @@
 				8CCC0848209EF8A30048829A /* Services */,
 				8CCC083D209EF5AE0048829A /* ViewController */,
 				8CCC0850209F055D0048829A /* View */,
-				8CCC0832209EDD920048829A /* Extensions */,
 				8CCC0828209ED9A00048829A /* Model */,
+				8CCC0832209EDD920048829A /* Extensions */,
+				8C02108F20AC081A0011A46F /* Fonts */,
 				8CCC07FA209ED80B0048829A /* AppDelegate.swift */,
 				8CCC07FC209ED80B0048829A /* ViewController.swift */,
 				8CCC07FE209ED80B0048829A /* Main.storyboard */,
@@ -469,19 +498,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C02109B20AC081A0011A46F /* GothaProMed.otf in Resources */,
 				8CCC0855209F05780048829A /* ItemImageCell.xib in Resources */,
+				8C02109C20AC081A0011A46F /* AvenirNextLTPro-It.otf in Resources */,
 				8CCC083C209EDE8F0048829A /* items.json in Resources */,
 				8C892D21209F177D003EBA96 /* ChatViewController.xib in Resources */,
 				8CD9D3B820AA8D0900B4B54D /* PostCell.xib in Resources */,
+				8C02109D20AC081A0011A46F /* AvenirNextLTPro-Regular.otf in Resources */,
 				8CD9D3BE20AA92BF00B4B54D /* DateView.xib in Resources */,
 				8CCC0805209ED80F0048829A /* LaunchScreen.storyboard in Resources */,
+				8C02109720AC081A0011A46F /* GothaProLig.otf in Resources */,
 				8CD9D39C20AA6BE700B4B54D /* MakePostVC.xib in Resources */,
 				8CCC0802209ED80F0048829A /* Assets.xcassets in Resources */,
 				8CCC0845209EF6190048829A /* DisplayItemsViewController.xib in Resources */,
+				8C02109A20AC081A0011A46F /* AvenirNextLTPro-Bold.otf in Resources */,
+				8C02109920AC081A0011A46F /* GothaProReg.otf in Resources */,
 				8CD9D3A820AA730100B4B54D /* RadioButton.xib in Resources */,
 				8CD9D38920AA542900B4B54D /* EnterUserNameVC.xib in Resources */,
 				8CD9D39820AA68AC00B4B54D /* EachItemPostsVC.xib in Resources */,
 				8CCC0800209ED80B0048829A /* Main.storyboard in Resources */,
+				8C02109820AC081A0011A46F /* GothaProBol.otf in Resources */,
 				8CD9D3B220AA7BEB00B4B54D /* LabelAndTextInputView.xib in Resources */,
 				8C892D27209F2769003EBA96 /* ChatBubbleCell.xib in Resources */,
 			);
@@ -512,10 +548,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-omni/Pods-omni-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Cartography/Cartography.framework",
+				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cartography.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
