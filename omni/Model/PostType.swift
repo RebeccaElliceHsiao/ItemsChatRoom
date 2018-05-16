@@ -15,8 +15,6 @@ enum PostType {
             return "Request"
         case .offer:
             return "Offer"
-        case .event:
-            return "Event"
         }
     }
 
