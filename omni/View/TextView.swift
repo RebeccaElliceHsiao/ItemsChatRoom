@@ -52,6 +52,12 @@ class TextView: UITextView, UITextViewDelegate {
         }
     }
 
+    var offset: Double? {
+        didSet {
+            self.resizePlaceholder()
+        }
+    }
+
     var textViewDelegate: UITextViewDelegate? {
         didSet {
             if self.delegate == nil {
