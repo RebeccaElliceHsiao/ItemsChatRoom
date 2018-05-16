@@ -59,14 +59,15 @@ class Interactor {
 //    }
 
     func processEdges(data: [[String: Any]]) {
+        // TODO fix this processEdges to allow for post and Messages
         guard let itemID = data.first?["item_id"] as? String else { return }
         guard let item = Item.fetch(with: itemID)  else { return }
-        item.messages = nil
+        item.posts = nil
         for dict in data {
             guard let commentid = dict["id"] as? Int else { continue }
             let commentId = String(commentid)
             if let comment = Message.fetch(with: commentId) {
-                item.messages?.add(comment)
+                item.posts?.add(comment)
             }
         }
     }

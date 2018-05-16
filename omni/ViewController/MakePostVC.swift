@@ -6,6 +6,7 @@
 //  Copyright © 2018年 Rebecca Hsiao. All rights reserved.
 //
 import UIKit
+import Cartography
 
 class MakeEventVC: UIViewController {
 
@@ -154,7 +155,7 @@ class MakeEventVC: UIViewController {
 
     @objc func postButtonPressed(_ button: UIButton) {
         let post = self.form.makePost()
-        self.interactor.createOrUpdatePost(post: post) { (post, error) in
+        self.interactor.createPost(post: post) { (post, error) in
             self.dismiss(animated: true, completion: nil)
             self.delegate?.makeEventDidDismiss(vc: self)
         }

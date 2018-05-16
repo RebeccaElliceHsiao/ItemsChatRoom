@@ -21,7 +21,7 @@ class PostInteractor: Interactor {
                 if let data = jsonData["data"] as? [String: Any] {
                     let object = self.fetchOrCreateObjects(from: data)
                     let post = self.getPost(from: object)
-                    completionHandler(message, error)
+                    completionHandler(post, error)
                 }
             }
             completionHandler(nil, error)
@@ -45,7 +45,7 @@ class PostInteractor: Interactor {
     }
 
     func deletePost(post: Post, completionHandler:@escaping ((Error?) -> Void)) {
-        let params: [String: Any] = ["id": message.id]
+        let params: [String: Any] = ["id": post.id]
         let path = "post"
         let request = NetworkRequest(method: .delete, path: path, params: params)
         Network.shared.send(request: request) { (data, error) in
@@ -55,7 +55,7 @@ class PostInteractor: Interactor {
     }
 
     func updatePost(post: Post, completionHandler:@escaping ((Post?, Error?) -> Void)) {
-        let params: [String: Any] = message.makeDict()
+        let params: [String: Any] = post.makeDict()
         let path = "post"
         let request = NetworkRequest(method: .put, path: path, params: params)
         Network.shared.send(request: request) { (jsonData, error) in
