@@ -16,12 +16,14 @@ class Interactor {
                     let item = Item.fetchOrCreate(with: objectDict)
                     objects.append(item)
                 } else {
-                    if data["type"] == "Request" {
-                        let object = Request.fetchOrCreate(with: objectDict)
-                        objects.append(object)
-                    } else if dict["type"] = "Offer" {
-                        let object = Offer.fetchOrCreate(with: objectDict)
-                        objects.append(object)
+                    if let type = objectDict["type"] as? String {
+                        if type == "Request" {
+                            let object = Request.fetchOrCreate(with: objectDict)
+                            objects.append(object)
+                        } else if type == "Offer" {
+                            let object = Offer.fetchOrCreate(with: objectDict)
+                            objects.append(object)
+                        }
                     } else {
                         let object = Message.fetchOrCreate(with: objectDict)
                         objects.append(object)
@@ -29,14 +31,16 @@ class Interactor {
                 }
             }
         } else if let data = data as? [String: Any] {
-            if data["type"] == "Request" {
-                let object = Request.fetchOrCreate(with: objectDict)
-                objects.append(object)
-            } else if dict["type"] = "Offer" {
-                let object = Offer.fetchOrCreate(with: objectDict)
-                objects.append(object)
+            if let type = data["type"] as? String {
+                if type == "Request" {
+                    let object = Request.fetchOrCreate(with: data)
+                    objects.append(object)
+                } else if type == "Offer" {
+                    let object = Offer.fetchOrCreate(with: data)
+                    objects.append(object)
+                }
             } else {
-                let object = Message.fetchOrCreate(with: objectDict)
+                let object = Message.fetchOrCreate(with: data)
                 objects.append(object)
             }
         }
