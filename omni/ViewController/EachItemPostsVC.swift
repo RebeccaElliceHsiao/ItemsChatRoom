@@ -44,15 +44,15 @@ class EachItemPostsVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         return item.posts?.count ?? 0
     }
 
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let cell = self.tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell,
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = self.tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell,
             let post = item.posts?[indexPath.row] as? Post else {
-            return UITableViewCell()
+                return UITableViewCell()
         }
         cell.configure(with: post)
     }
 
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let post = item.posts?[indexPath.row] as? Post else { return }
         let vc = ChatViewController(post: post)
         self.navigationController?.pushViewController(vc, animated: true)
