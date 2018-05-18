@@ -49,6 +49,7 @@ class EachItemPostsVC: UIViewController, UITableViewDataSource, UITableViewDeleg
                 return UITableViewCell()
         }
         cell.configure(with: post)
+        cell.selectionStyle = .none
         return cell
     }
 
