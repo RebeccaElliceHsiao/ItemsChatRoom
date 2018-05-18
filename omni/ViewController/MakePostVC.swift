@@ -8,14 +8,14 @@
 import UIKit
 import Cartography
 
-class MakeEventVC: UIViewController {
+class MakePostVC: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var postButton: UIButton!
     @IBOutlet weak var eventTypeToggle: UIStackView!
     @IBOutlet weak var toggleContainerView: UIView!
     @IBOutlet weak var scrollViewConstraint: NSLayoutConstraint!
-
+    
     private let post: Post?
     private var postType: PostType = .request
     private var form: PostEventForm!
