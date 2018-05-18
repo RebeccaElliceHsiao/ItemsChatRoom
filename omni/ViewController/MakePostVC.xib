@@ -12,11 +12,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MakePostVC" customModule="omni" customModuleProvider="target">
             <connections>
-                <outlet property="eventTypeToggle" destination="RNm-ZM-nS3" id="6YC-Da-2fr"/>
-                <outlet property="postButton" destination="hfn-MC-eol" id="saj-DL-UTK"/>
-                <outlet property="scrollView" destination="u6W-Jj-Bd2" id="V7O-dm-SaZ"/>
-                <outlet property="scrollViewConstraint" destination="jlq-77-LHK" id="cLY-9E-0kW"/>
-                <outlet property="toggleContainerView" destination="H7c-yR-6wS" id="olz-Qb-Ng2"/>
+                <outlet property="eventTypeToggle" destination="RNm-ZM-nS3" id="UXf-h0-e0Y"/>
+                <outlet property="postButton" destination="hfn-MC-eol" id="8gO-0j-16Q"/>
+                <outlet property="scrollView" destination="u6W-Jj-Bd2" id="yr9-Zh-0ot"/>
+                <outlet property="scrollViewConstraint" destination="jlq-77-LHK" id="xoX-Vs-az7"/>
+                <outlet property="toggleContainerView" destination="H7c-yR-6wS" id="ci4-UR-zhR"/>
                 <outlet property="view" destination="Pqc-wx-JHX" id="3Ua-2b-eo8"/>
             </connections>
         </placeholder>

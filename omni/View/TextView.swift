@@ -74,6 +74,9 @@ class TextView: UITextView, UITextViewDelegate {
     }
 
     public func textViewDidChange(_ textView: UITextView) {
+        if let placeholderLabel = self.viewWithTag(100) as? UILabel {
+            placeholderLabel.isHidden = self.text.count > 0
+        }
         self.supportGrowth()
         self.textViewDelegate?.textViewDidChange?(textView)
     }
