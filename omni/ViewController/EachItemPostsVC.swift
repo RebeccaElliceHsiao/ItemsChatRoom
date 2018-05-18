@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EachItemPostsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class EachItemPostsVC: UIViewController, UITableViewDataSource, UITableViewDelegate, MakePostVCDelegeate {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var creatPostButton: PinkButton!
@@ -19,22 +19,21 @@ class EachItemPostsVC: UIViewController, UITableViewDataSource, UITableViewDeleg
     init(item: Item) {
         self.item = item
         super.init(nibName: nil, bundle: nil)
-        self.interactor.fetchPost(item: item) { (_) in
-            self.tableView.reloadData()
-        }
+        self.interactor.fetchPost(item: item) { (_) in }
         self.navigationItem.title = item.item_name
     }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.tableView.dataSource = self
         self.tableView.delegate = self
         self.tableView.register(UINib(nibName: "PostCell", bundle: nil), forCellReuseIdentifier: "PostCell")
+        self.tableView.rowHeight = 100
 
         self.creatPostButton.configure(title: "Create Post")
         self.creatPostButton.addTarget(self, action: #selector(createPostPressed), for: .touchUpInside)
@@ -60,8 +59,14 @@ class EachItemPostsVC: UIViewController, UITableViewDataSource, UITableViewDeleg
     }
 
     @objc func createPostPressed() {
-        let vc = MakePostVC(post: nil)
-        self.present(vc, animated: true, completion: nil)
+        let vc = MakePostVC(item: self.item)
+        vc.delegate = self
+        let nav = UINavigationController(rootViewController: vc)
+        self.present(nav, animated: true, completion: nil)
+    }
+
+    func postWasPressed() {
+        self.tableView.reloadData()
     }
 
 }

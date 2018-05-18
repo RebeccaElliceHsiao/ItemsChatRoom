@@ -8,6 +8,10 @@
 import UIKit
 import Cartography
 
+protocol MakePostVCDelegeate: class {
+    func postWasPressed()
+}
+
 class MakePostVC: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
@@ -19,15 +23,18 @@ class MakePostVC: UIViewController {
     private let post: Post?
     private var postType: PostType = .request
     private var form: PostEventForm!
-
+    private let item: Item
     private var interactor = PostInteractor()
 
-    init(post: Post? = nil) {
+    var delegate: MakePostVCDelegeate?
+
+    init(item: Item, post: Post? = nil) {
         if post is Request {
             self.postType = .request
         } else if post is Offer {
             self.postType = .offer
-        } 
+        }
+        self.item = item
         self.post = post
         super.init(nibName: nil, bundle: nil)
     }
@@ -154,9 +161,10 @@ class MakePostVC: UIViewController {
     }
 
     @objc func postButtonPressed(_ button: UIButton) {
-        let post = self.form.makePost()
+        let post = self.form.makePost(item: self.item)
         self.interactor.createPost(post: post) { (post, error) in
             self.dismiss(animated: true, completion: nil)
+            self.delegate?.postWasPressed()
         }
     }
 
