@@ -104,8 +104,8 @@ class PostEventForm: UIView {
         return self.from.validate() && self.location.validate()
     }
 
-    func makePost() -> Post {
-        var post: Post! = self.post
+    func makePost(item: Item) -> Post {
+        var post: Post? = self.post
         if post == nil {
             if self.postType == .request {
                 post = Request.createNew()
@@ -120,8 +120,9 @@ class PostEventForm: UIView {
         post?.location = self.location.text
         post?.additionalNotes = self.additionalNotes.text
         post?.creator = User.currentUser
+        post?.item = item
 
-        return post
+        return post!
     }
 
     override func layoutSubviews() {
