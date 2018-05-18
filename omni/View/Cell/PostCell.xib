@@ -32,7 +32,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Tp-9j-A4o" customClass="DateView" customModule="omni" customModuleProvider="target">
-                                        <rect key="frame" x="230" y="10" width="40" height="40"/>
+                                        <rect key="frame" x="210" y="10" width="40" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="enk-af-Ghl"/>
@@ -48,10 +48,10 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="0Tp-9j-A4o" firstAttribute="leading" secondItem="S30-ed-eQh" secondAttribute="leading" constant="210" id="4Zy-3j-kaQ"/>
                                     <constraint firstItem="NTZ-Sk-Wpl" firstAttribute="top" secondItem="S30-ed-eQh" secondAttribute="top" constant="14" id="Cjg-Rz-E51"/>
                                     <constraint firstItem="NTZ-Sk-Wpl" firstAttribute="leading" secondItem="S30-ed-eQh" secondAttribute="leading" constant="18" id="GdX-VP-xSe"/>
                                     <constraint firstItem="p86-n2-Alc" firstAttribute="leading" secondItem="S30-ed-eQh" secondAttribute="leading" constant="18" id="Lxb-T1-gT8"/>
-                                    <constraint firstAttribute="trailing" secondItem="0Tp-9j-A4o" secondAttribute="trailing" constant="10" id="dBQ-5z-Amw"/>
                                     <constraint firstItem="p86-n2-Alc" firstAttribute="top" secondItem="NTZ-Sk-Wpl" secondAttribute="bottom" constant="2" id="eiv-aA-jTe"/>
                                     <constraint firstItem="0Tp-9j-A4o" firstAttribute="top" secondItem="S30-ed-eQh" secondAttribute="top" constant="10" id="f4K-jB-5HM"/>
                                 </constraints>

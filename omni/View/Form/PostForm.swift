@@ -50,7 +50,7 @@ class PostEventForm: UIView {
         self.postType = postType
 
         for subview in self.stackView.arrangedSubviews {
-            self.stackView.removeArrangedSubview(subview)
+            subview.removeFromSuperview()
         }
 
         let toAndFromStackView = UIStackView()
