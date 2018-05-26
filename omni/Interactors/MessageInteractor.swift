@@ -31,8 +31,7 @@ class MessageInteractor: Interactor {
     func fetchMessages(conversation: Conversation, completionHandler:@escaping ((Error?) -> Void)) {
         let params: [String: Any] = ["id": conversation.id]
         let path = "item"
-        var request = NetworkRequest(method: .get, path: path)
-
+        var request = NetworkRequest(method: .get, path: path, params: params)
         Network.shared.send(request: request) { (jsonData, error) in
             if let jsonData = jsonData as? [String: Any] {
                 if let data = jsonData["data"] as? [[String: Any]] {

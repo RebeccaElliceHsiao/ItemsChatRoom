@@ -24,9 +24,6 @@ class ChatViewController: UIViewController, UITableViewDataSource {
     init(conversation: Conversation) {
         self.conversation = conversation
         super.init(nibName: nil, bundle: nil)
-        self.interactor.fetchMessages(conversation: conversation) { (_) in
-            self.tableView.reloadData()
-        }
         self.navigationItem.title = conversation.item_name
     }
 
@@ -37,7 +34,6 @@ class ChatViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
         let nib = UINib(nibName: "ChatBubbleCell", bundle: nil)
         self.tableView.register(nib, forCellReuseIdentifier: "ChatBubbleCell")
         self.tableView.dataSource = self
@@ -45,6 +41,10 @@ class ChatViewController: UIViewController, UITableViewDataSource {
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.separatorStyle = .none
         self.tableView.separatorInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
+
+        self.interactor.fetchMessages(conversation: conversation) { (_) in
+            self.tableView.reloadData()
+        }
 
         self.sendButton.addTarget(self, action: #selector(sendPressed), for: .touchUpInside)
         self.commentButton.addTarget(self, action: #selector(commentPressed), for: .touchUpInside)
