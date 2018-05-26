@@ -13,4 +13,4 @@ Then just hit
 
 # shift + Cmd + R
 
-to run the project. That's it! Thanks for this fun project!
+to run the project. That's it!
