@@ -27,7 +27,8 @@ class ChatViewController: UIViewController, UITableViewDataSource {
         self.interactor.fetchMessages(post: post) { (_) in
             self.tableView.reloadData()
         }
-        self.navigationItem.title = post.item?.item_name ?? "Special Item"
+        self.navigationItem.leftBarButtonItem?.title = "Back"
+        self.navigationItem.title = post.text
     }
 
     required init?(coder aDecoder: NSCoder) {
